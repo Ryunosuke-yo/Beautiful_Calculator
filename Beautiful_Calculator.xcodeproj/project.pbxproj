@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B29303F290F3BB200EFAD34 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B29303E290F3BB200EFAD34 /* SettingView.swift */; };
 		2B98F04A290A63490086C7BA /* Beautiful_CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98F049290A63490086C7BA /* Beautiful_CalculatorApp.swift */; };
 		2B98F04C290A63490086C7BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98F04B290A63490086C7BA /* ContentView.swift */; };
 		2B98F04E290A634A0086C7BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B98F04D290A634A0086C7BA /* Assets.xcassets */; };
@@ -14,6 +15,9 @@
 		2B98F05B290A634A0086C7BA /* Beautiful_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98F05A290A634A0086C7BA /* Beautiful_CalculatorTests.swift */; };
 		2B98F065290A634A0086C7BA /* Beautiful_CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98F064290A634A0086C7BA /* Beautiful_CalculatorUITests.swift */; };
 		2B98F067290A634A0086C7BA /* Beautiful_CalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98F066290A634A0086C7BA /* Beautiful_CalculatorUITestsLaunchTests.swift */; };
+		2B98F076290A64140086C7BA /* Jost-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B98F075290A64140086C7BA /* Jost-VariableFont_wght.ttf */; };
+		2B98F07B290A64F00086C7BA /* CalcBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98F07A290A64F00086C7BA /* CalcBtn.swift */; };
+		2B98F07D290A65140086C7BA /* WdithAndHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98F07C290A65140086C7BA /* WdithAndHeight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B29303E290F3BB200EFAD34 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		2B98F046290A63490086C7BA /* Beautiful_Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beautiful_Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B98F049290A63490086C7BA /* Beautiful_CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beautiful_CalculatorApp.swift; sourceTree = "<group>"; };
 		2B98F04B290A63490086C7BA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +49,10 @@
 		2B98F060290A634A0086C7BA /* Beautiful_CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Beautiful_CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B98F064290A634A0086C7BA /* Beautiful_CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beautiful_CalculatorUITests.swift; sourceTree = "<group>"; };
 		2B98F066290A634A0086C7BA /* Beautiful_CalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beautiful_CalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2B98F073290A63CE0086C7BA /* Beautiful-Calculator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Beautiful-Calculator-Info.plist"; sourceTree = SOURCE_ROOT; };
+		2B98F075290A64140086C7BA /* Jost-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		2B98F07A290A64F00086C7BA /* CalcBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcBtn.swift; sourceTree = "<group>"; };
+		2B98F07C290A65140086C7BA /* WdithAndHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WdithAndHeight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B29303D290F3B9400EFAD34 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2B29303E290F3BB200EFAD34 /* SettingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		2B98F03D290A63490086C7BA = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +111,11 @@
 		2B98F048290A63490086C7BA /* Beautiful_Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				2B29303D290F3B9400EFAD34 /* Views */,
+				2B98F079290A64DA0086C7BA /* enums */,
+				2B98F078290A64D20086C7BA /* structs */,
+				2B98F077290A64280086C7BA /* fonts */,
+				2B98F073290A63CE0086C7BA /* Beautiful-Calculator-Info.plist */,
 				2B98F049290A63490086C7BA /* Beautiful_CalculatorApp.swift */,
 				2B98F04B290A63490086C7BA /* ContentView.swift */,
 				2B98F04D290A634A0086C7BA /* Assets.xcassets */,
@@ -125,6 +147,30 @@
 				2B98F066290A634A0086C7BA /* Beautiful_CalculatorUITestsLaunchTests.swift */,
 			);
 			path = Beautiful_CalculatorUITests;
+			sourceTree = "<group>";
+		};
+		2B98F077290A64280086C7BA /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2B98F075290A64140086C7BA /* Jost-VariableFont_wght.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		2B98F078290A64D20086C7BA /* structs */ = {
+			isa = PBXGroup;
+			children = (
+				2B98F07C290A65140086C7BA /* WdithAndHeight.swift */,
+			);
+			path = structs;
+			sourceTree = "<group>";
+		};
+		2B98F079290A64DA0086C7BA /* enums */ = {
+			isa = PBXGroup;
+			children = (
+				2B98F07A290A64F00086C7BA /* CalcBtn.swift */,
+			);
+			path = enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +279,7 @@
 			files = (
 				2B98F051290A634A0086C7BA /* Preview Assets.xcassets in Resources */,
 				2B98F04E290A634A0086C7BA /* Assets.xcassets in Resources */,
+				2B98F076290A64140086C7BA /* Jost-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +305,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B98F04C290A63490086C7BA /* ContentView.swift in Sources */,
+				2B29303F290F3BB200EFAD34 /* SettingView.swift in Sources */,
+				2B98F07B290A64F00086C7BA /* CalcBtn.swift in Sources */,
 				2B98F04A290A63490086C7BA /* Beautiful_CalculatorApp.swift in Sources */,
+				2B98F07D290A65140086C7BA /* WdithAndHeight.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +469,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Beautiful_Calculator/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Beautiful-Calculator-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -447,6 +499,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Beautiful_Calculator/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Beautiful-Calculator-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
