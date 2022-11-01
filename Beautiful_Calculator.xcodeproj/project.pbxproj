@@ -18,6 +18,9 @@
 		2B98F076290A64140086C7BA /* Jost-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B98F075290A64140086C7BA /* Jost-VariableFont_wght.ttf */; };
 		2B98F07B290A64F00086C7BA /* CalcBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98F07A290A64F00086C7BA /* CalcBtn.swift */; };
 		2B98F07D290A65140086C7BA /* WdithAndHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98F07C290A65140086C7BA /* WdithAndHeight.swift */; };
+		2BE583772910EDCD00A76263 /* MyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE583762910EDCD00A76263 /* MyColors.swift */; };
+		2BE5837A2910F50700A76263 /* ColorOptionCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE583792910F50700A76263 /* ColorOptionCircle.swift */; };
+		2BE5837C2910FE8900A76263 /* ThemeOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5837B2910FE8900A76263 /* ThemeOptionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		2B98F075290A64140086C7BA /* Jost-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		2B98F07A290A64F00086C7BA /* CalcBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcBtn.swift; sourceTree = "<group>"; };
 		2B98F07C290A65140086C7BA /* WdithAndHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WdithAndHeight.swift; sourceTree = "<group>"; };
+		2BE583762910EDCD00A76263 /* MyColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColors.swift; sourceTree = "<group>"; };
+		2BE583792910F50700A76263 /* ColorOptionCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorOptionCircle.swift; sourceTree = "<group>"; };
+		2BE5837B2910FE8900A76263 /* ThemeOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeOptionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +89,7 @@
 		2B29303D290F3B9400EFAD34 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2B29303E290F3BB200EFAD34 /* SettingView.swift */,
+				2BE583782910F4E600A76263 /* settingViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,6 +166,7 @@
 		2B98F078290A64D20086C7BA /* structs */ = {
 			isa = PBXGroup;
 			children = (
+				2BE583762910EDCD00A76263 /* MyColors.swift */,
 				2B98F07C290A65140086C7BA /* WdithAndHeight.swift */,
 			);
 			path = structs;
@@ -171,6 +178,16 @@
 				2B98F07A290A64F00086C7BA /* CalcBtn.swift */,
 			);
 			path = enums;
+			sourceTree = "<group>";
+		};
+		2BE583782910F4E600A76263 /* settingViews */ = {
+			isa = PBXGroup;
+			children = (
+				2BE583792910F50700A76263 /* ColorOptionCircle.swift */,
+				2BE5837B2910FE8900A76263 /* ThemeOptionView.swift */,
+				2B29303E290F3BB200EFAD34 /* SettingView.swift */,
+			);
+			path = settingViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,10 +322,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B98F04C290A63490086C7BA /* ContentView.swift in Sources */,
+				2BE583772910EDCD00A76263 /* MyColors.swift in Sources */,
 				2B29303F290F3BB200EFAD34 /* SettingView.swift in Sources */,
+				2BE5837A2910F50700A76263 /* ColorOptionCircle.swift in Sources */,
 				2B98F07B290A64F00086C7BA /* CalcBtn.swift in Sources */,
 				2B98F04A290A63490086C7BA /* Beautiful_CalculatorApp.swift in Sources */,
 				2B98F07D290A65140086C7BA /* WdithAndHeight.swift in Sources */,
+				2BE5837C2910FE8900A76263 /* ThemeOptionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
