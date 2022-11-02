@@ -11,13 +11,13 @@ import SwiftUI
 struct SettingView: View {
     @Binding var showSetting: Bool
     
-    let colorOptions = [Color.white, MyColors.myBlack, MyColors.myRed, MyColors.myGreen, MyColors.myPurple]
+    let colorOptions:[Color] = [.white, .myBlack, .myRed, .myGreen, .myPurple]
     
     
     var body: some View {
         NavigationView {
             ZStack {
-                MyColors.whiteGray.ignoresSafeArea()
+                Color.whiteGray.ignoresSafeArea()
                 Button {
                     showSetting = false
                 } label: {
@@ -26,11 +26,13 @@ struct SettingView: View {
                 }
                 
                 .position(x: 360, y: 30)
-                .foregroundColor(MyColors.myBlack)
+                .foregroundColor(.myBlack)
                 
-                VStack{
+                VStack(spacing: 0){
+                    
                     Spacer()
-                    VStack(spacing: 5){
+                    
+                    VStack(spacing : 15){
                         HStack{
                             Text("Calculator color")
                                 .foregroundColor(.black)
@@ -46,8 +48,11 @@ struct SettingView: View {
                             }
                             
                         }
-                        
-                        
+                    }
+                    
+                    Spacer()
+                    
+                    VStack(spacing:15) {
                         HStack{
                             Text("Text color")
                                 .foregroundColor(.black)
@@ -62,35 +67,35 @@ struct SettingView: View {
                                 ColorOptionCircle(fillColor: color)
                             }
                         }
-                        
-                        
-                        NavigationLink(destination: ThemeOptionView()) {
-                            HStack {
-                                Text("Select theme")
-                                    .foregroundColor(.black)
-                                    .font(.custom("Jost-Regular", size: 19))
-                                    .tracking(2)
-                                Spacer()
-                                Text("Soft")
-                                    .foregroundColor(.gray)
-                                    .font(.custom("Jost-Regular", size: 19))
-                                    .tracking(2)
-                                Image(systemName: "chevron.forward")
-                                    .foregroundColor(.gray)
-                            }
-                            .padding([.leading, .trailing], 30)
-                        }
                     }
                     
+                    
+                    Spacer()
+                    
+                    NavigationLink(destination: ThemeOptionView()) {
+                        HStack {
+                            Text("Select theme")
+                                .foregroundColor(.black)
+                                .font(.custom("Jost-Regular", size: 19))
+                                .tracking(2)
+                            Spacer()
+                            Text("Soft")
+                                .foregroundColor(.gray)
+                                .font(.custom("Jost-Regular", size: 19))
+                                .tracking(2)
+                            Image(systemName: "chevron.forward")
+                                .foregroundColor(.gray)
+                        }
+                        .padding([.leading, .trailing], 30)
+                    }
                     Spacer()
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                
+                
             }
-            
-            
-            
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-        
     }
+    
 }
 

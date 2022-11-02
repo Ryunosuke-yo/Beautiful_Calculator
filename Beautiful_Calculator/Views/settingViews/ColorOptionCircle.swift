@@ -18,7 +18,7 @@ struct ColorOptionCircle: View {
             
         } label: {
             Circle()
-                .fill(fillColor.shadow(.drop(color: MyColors.shadowGray.opacity(0.3), radius: 5, x: 3, y: 3)))
+                .fill(fillColor.shadow(.drop(color: Color.shadowGray.opacity(0.3), radius: 5, x: 3, y: 3)))
                 .frame(width: 45, height: 45)
         }
         

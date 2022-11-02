@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var showSetting = false
+    @StateObject private var themeViewModel = ThemeViewModel()
     
     let buttons: [[CalcBtn]] = [
         [.ac, .negative, .percent, .divide],
@@ -31,7 +32,6 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             Color.black.ignoresSafeArea()
-            
             VStack(spacing: 2) {
                 Spacer()
                 VStack {
