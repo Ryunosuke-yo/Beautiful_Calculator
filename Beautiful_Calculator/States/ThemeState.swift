@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 
 extension ContentView {
@@ -33,4 +34,8 @@ extension ContentView {
             isSimple = true
         }
     }
-}
+    
+    
+        
+    }
+

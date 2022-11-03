@@ -10,6 +10,7 @@ import SwiftUI
 
 struct SettingView: View {
     @Binding var showSetting: Bool
+    @EnvironmentObject private var colorView: ColorView
     
     let colorOptions:[Color] = [.white, .myBlack, .myRed, .myGreen, .myPurple]
     
@@ -44,7 +45,7 @@ struct SettingView: View {
                         
                         HStack(spacing: 20) {
                             ForEach(colorOptions, id: \.self ){ color in
-                                ColorOptionCircle(fillColor: color)
+                                ColorOptionCircle(fillColor: color, changeColor: colorView.changeBgColor)
                             }
                             
                         }
@@ -64,7 +65,7 @@ struct SettingView: View {
                         
                         HStack(spacing: 20) {
                             ForEach(colorOptions, id: \.self ){ color in
-                                ColorOptionCircle(fillColor: color)
+                                ColorOptionCircle(fillColor: color, changeColor: colorView.changeTextColor)
                             }
                         }
                     }

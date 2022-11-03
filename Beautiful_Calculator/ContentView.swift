@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var showSetting = false
     @StateObject private var themeViewModel = ThemeViewModel()
+    @EnvironmentObject private var colorView: ColorView
     
     let buttons: [[CalcBtn]] = [
         [.ac, .negative, .percent, .divide],
@@ -31,7 +32,7 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            Color.black.ignoresSafeArea()
+        colorView.cuurentBgColor.ignoresSafeArea()
             VStack(spacing: 2) {
                 Spacer()
                 VStack {
@@ -40,7 +41,7 @@ struct ContentView: View {
                     } label: {
                         Image(systemName: "gearshape.fill")
                     }
-                    .foregroundColor(.white)
+                    .foregroundColor(colorView.currentTextColor)
                     .font(.system(size: 15))
                     .position(x:25, y:30)
                     .sheet(isPresented: $showSetting) {
@@ -51,13 +52,13 @@ struct ContentView: View {
                         Spacer()
                         VStack(alignment:.trailing){
                             Text("3 + 4 = ")
-                                .foregroundColor(.white)
+                                .foregroundColor(colorView.currentTextColor)
                                 .font(.custom("Jost-Regular", size: 21))
                             Text("7")
-                                .foregroundColor(.white)
+                                .foregroundColor(colorView.currentTextColor)
                                 .font(.custom("Jost-Regular", size: 23))
                             Text("3 + 4 = ")
-                                .foregroundColor(.white)
+                                .foregroundColor(colorView.currentTextColor)
                                 .font(.custom("Jost-Regular", size: 21))
                         }
                         
@@ -66,7 +67,7 @@ struct ContentView: View {
                     HStack {
                         Spacer()
                         Text("0")
-                            .foregroundColor(.white)
+                            .foregroundColor(colorView.currentTextColor)
                             .font(.custom("Jost-Regular", size: 60))
                     }
                 }
@@ -87,8 +88,8 @@ struct ContentView: View {
                                 
                                 Text(value.rawValue)
                                     .frame(width: WidthAndHeight.btnWidth(value), height: WidthAndHeight.btnHeight())
-                                    .background(.black)
-                                    .foregroundColor(.white)
+                                    .background(colorView.cuurentBgColor)
+                                    .foregroundColor(colorView.currentTextColor)
                                     .font(.custom("Jost-Regular", size: 30))
                                 
                                 
@@ -98,19 +99,18 @@ struct ContentView: View {
                         }
                     }
                 }
-                
-                
             }
-  
             
         }
-        
-        
+    
     }
+       
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(ColorView())
     }
 }

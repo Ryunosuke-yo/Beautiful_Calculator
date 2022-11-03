@@ -20,6 +20,7 @@
 		2B98F076290A64140086C7BA /* Jost-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B98F075290A64140086C7BA /* Jost-VariableFont_wght.ttf */; };
 		2B98F07B290A64F00086C7BA /* CalcBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98F07A290A64F00086C7BA /* CalcBtn.swift */; };
 		2B98F07D290A65140086C7BA /* WdithAndHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98F07C290A65140086C7BA /* WdithAndHeight.swift */; };
+		2BA2A121291393E90034A30C /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA2A120291393E90034A30C /* ColorView.swift */; };
 		2BE583772910EDCD00A76263 /* MyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE583762910EDCD00A76263 /* MyColors.swift */; };
 		2BE5837A2910F50700A76263 /* ColorOptionCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE583792910F50700A76263 /* ColorOptionCircle.swift */; };
 		2BE5837C2910FE8900A76263 /* ThemeOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5837B2910FE8900A76263 /* ThemeOptionView.swift */; };
@@ -60,6 +61,7 @@
 		2B98F075290A64140086C7BA /* Jost-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		2B98F07A290A64F00086C7BA /* CalcBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcBtn.swift; sourceTree = "<group>"; };
 		2B98F07C290A65140086C7BA /* WdithAndHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WdithAndHeight.swift; sourceTree = "<group>"; };
+		2BA2A120291393E90034A30C /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
 		2BE583762910EDCD00A76263 /* MyColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColors.swift; sourceTree = "<group>"; };
 		2BE583792910F50700A76263 /* ColorOptionCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorOptionCircle.swift; sourceTree = "<group>"; };
 		2BE5837B2910FE8900A76263 /* ThemeOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeOptionView.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				2B8DEB80291250200087D29E /* ThemeState.swift */,
+				2BA2A120291393E90034A30C /* ColorView.swift */,
 			);
 			path = States;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				2B98F04A290A63490086C7BA /* Beautiful_CalculatorApp.swift in Sources */,
 				2B8DEB81291250200087D29E /* ThemeState.swift in Sources */,
 				2B98F07D290A65140086C7BA /* WdithAndHeight.swift in Sources */,
+				2BA2A121291393E90034A30C /* ColorView.swift in Sources */,
 				2BE5837C2910FE8900A76263 /* ThemeOptionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
