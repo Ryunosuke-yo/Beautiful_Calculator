@@ -12,7 +12,7 @@ struct SettingView: View {
     @Binding var showSetting: Bool
     @EnvironmentObject private var colorView: ColorView
     
-    let colorOptions:[Color] = [.white, .myBlack, .myRed, .myGreen, .myPurple]
+    let colorOptions:[Color] = [.myWhite, .myBlack, .myRed, .myGreen, .myPurple]
     
     
     var body: some View {

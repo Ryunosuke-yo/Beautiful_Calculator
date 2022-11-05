@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ThemeOptionView: View {
     @State var isOn = false
-    @StateObject private var themeViewModel = ContentView.ThemeViewModel()
+    @EnvironmentObject private var themeViewModel: ThemeViewModel
     
     
     let themesArray:[Themes] = [.soft, .glass, .simple]
@@ -38,6 +38,7 @@ struct ThemeOptionView: View {
                                 themeViewModel.setIsSoft()
                             } else if theme == Themes.glass {
                                 themeViewModel.setIsGlass()
+                                print("glass")
                             } else if theme == Themes.simple {
                                 themeViewModel.setIsSimple()
                             }
@@ -46,7 +47,7 @@ struct ThemeOptionView: View {
                         
                         Rectangle()
                             .fill(.gray)
-                            .frame(width: WidthAndHeight.dividerWidth, height: 1)
+                            .frame(width: CalcUltils.dividerWidth, height: 1)
                             .padding(.vertical, 3)
                     }
                     .padding([.trailing, .leading], 40)

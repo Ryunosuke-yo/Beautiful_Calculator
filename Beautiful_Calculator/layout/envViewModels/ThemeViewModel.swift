@@ -9,12 +9,12 @@ import Foundation
 import SwiftUI
 
 
-extension ContentView {
-    @MainActor class ThemeViewModel: ObservableObject {
-        @Published var isSoft = true
+
+  class ThemeViewModel: ObservableObject {
+        @Published var isSoft = false
         @Published var isGlass = false
-        @Published var isSimple = false
-        
+        @Published var isSimple = true
+        @Published var isSetting = false
         
         func setIsSoft() {
             isSoft = true
@@ -37,5 +37,5 @@ extension ContentView {
     
     
         
-    }
+    
 
