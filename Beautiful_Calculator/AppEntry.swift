@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AppEntry: View {
     @EnvironmentObject private var themeState: ThemeViewModel
+    @StateObject private var viewModel = ViewModel()
     
     
     //    init(){
@@ -25,11 +26,11 @@ struct AppEntry: View {
     
     var body: some View {
         if themeState.isSimple {
-            SimpleLayout()
+            SimpleLayout(showSetting: $viewModel.showSetting)
         } else if themeState.isGlass {
-            GlassLayout()
+            GlassLayout(showSetting: $viewModel.showSetting)
         } else {
-            SoftLayout()
+            SoftLayout(showSetting: $viewModel.showSetting)
         }
         
     }}

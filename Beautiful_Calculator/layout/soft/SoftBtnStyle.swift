@@ -7,8 +7,10 @@
 
 import SwiftUI
 
+
 struct SoftBtnStyle: ButtonStyle {
     @EnvironmentObject private var colorView: ColorView
+    @EnvironmentObject private var shadowViewModel: ShadowViewModel
     let isRectangle: Bool
     
     func makeBody(configuration: Configuration) -> some View {
@@ -30,15 +32,15 @@ struct SoftBtnStyle: ButtonStyle {
                             Rectangle()
                                 .fill(colorView.cuurentBgColor)
                                 .cornerRadius(30)
-                                .shadow(color: .black.opacity(0.2), radius: 8, x:8, y: 8)
-                                .shadow(color: .white.opacity(0.7), radius: 6, x:-3, y: -3)
+                                .conditinalShadow(bgColor: colorView.cuurentBgColor, currentRightShadow: shadowViewModel.currentRightShadow, currentLeftShadow: shadowViewModel.currentLeftShadow)
+
                             
                         } else {
                                 Circle()
                                     .fill(colorView.cuurentBgColor)
-                                    .shadow(color: .black.opacity(0.2), radius: 8, x:8, y: 8)
-                                    .shadow(color: .white.opacity(0.7), radius: 6, x:-3, y: -3)
-                            }
+                                    .conditinalShadow(bgColor: colorView.cuurentBgColor, currentRightShadow: shadowViewModel.currentRightShadow, currentLeftShadow: shadowViewModel.currentLeftShadow)
+                            
+                        }
                         
                         
                         
@@ -49,3 +51,12 @@ struct SoftBtnStyle: ButtonStyle {
         
     }
 }
+
+
+extension View {
+    func conditinalShadow(bgColor: Color, currentRightShadow: Color, currentLeftShadow: Color) -> some View {
+        modifier(ConditionalShadowForSoft(bgColor:bgColor, currentRightShadow: currentRightShadow, currentLeftShadow: currentLeftShadow))
+    }
+}
+
+

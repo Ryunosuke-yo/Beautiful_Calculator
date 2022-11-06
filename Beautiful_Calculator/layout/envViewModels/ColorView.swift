@@ -9,8 +9,9 @@ import Foundation
 import SwiftUI
 
 class ColorView: ObservableObject {
-    @Published var cuurentBgColor: Color = .black
-    @Published var currentTextColor: Color = .white
+    @Published var cuurentBgColor: Color = .myBlack
+    @Published var currentTextColor: Color = .myWhite
+  
     
     func changeBgColor(_ color: Color) {
         cuurentBgColor = color
@@ -19,4 +20,6 @@ class ColorView: ObservableObject {
     func changeTextColor(_ color:Color) {
         currentTextColor = color
     }
+    
+   
 }

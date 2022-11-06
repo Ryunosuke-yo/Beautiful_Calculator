@@ -1,24 +1,23 @@
 //
-//  ColorOptionCircle.swift
+//  TextColorOptionCircle.swift
 //  Beautiful_Calculator
 //
-//  Created by Ryunosuke Yokokawa on 2022-10-31.
+//  Created by Ryunosuke Yokokawa on 2022-11-05.
 //
 
+import Foundation
 import SwiftUI
 
-struct BgColorOptionCircle: View {
+
+struct TextColorOptionCircle: View {
     let fillColor:Color
-    let leftShadowColor: Color
-    let rightShadowColor: Color
     let changeColor : ((Color)-> Void)
-    let changeShadowColor: ((Color, Color)-> Void)
+   
     
     var body: some View {
         
         Button{
             changeColor(fillColor)
-            changeShadowColor(leftShadowColor, rightShadowColor)
           
         } label: {
             Circle()
@@ -27,5 +26,3 @@ struct BgColorOptionCircle: View {
         
     }
 }
-
-

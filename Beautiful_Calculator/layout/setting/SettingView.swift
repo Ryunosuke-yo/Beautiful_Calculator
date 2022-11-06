@@ -11,8 +11,17 @@ import SwiftUI
 struct SettingView: View {
     @Binding var showSetting: Bool
     @EnvironmentObject private var colorView: ColorView
+    @EnvironmentObject private var shadowViewModel: ShadowViewModel
     
-    let colorOptions:[Color] = [.myWhite, .myBlack, .myRed, .myGreen, .myPurple]
+//    let colorOptions:[Color] = [.myWhite, .myBlack, .myRed, .myGreen, .myPurple]
+    
+    let colorOptions:[[Color]] = [
+        [.myWhite, .myWhite_leftShadow, .myWhite_rightShadow],
+        [.myBlack, .myBlack_leftShadow, .myBlack_rightShadow],
+        [.myRed, .myRed_leftShadow, .myBlack_rightShadow],
+        [.myPurple, .myPurple_leftShadow, .myBlack_rightShadow],
+        [.myGreen, .myGreen_leftShadow, .myBlack_rightShadow],
+    ]
     
     
     var body: some View {
@@ -45,7 +54,7 @@ struct SettingView: View {
                         
                         HStack(spacing: 20) {
                             ForEach(colorOptions, id: \.self ){ color in
-                                ColorOptionCircle(fillColor: color, changeColor: colorView.changeBgColor)
+                                BgColorOptionCircle(fillColor: color[0], leftShadowColor: color[1],  rightShadowColor: color[2], changeColor: colorView.changeBgColor, changeShadowColor: shadowViewModel.changeShadowColor)
                             }
                             
                         }
@@ -65,7 +74,7 @@ struct SettingView: View {
                         
                         HStack(spacing: 20) {
                             ForEach(colorOptions, id: \.self ){ color in
-                                ColorOptionCircle(fillColor: color, changeColor: colorView.changeTextColor)
+                                TextColorOptionCircle(fillColor: color[0], changeColor: colorView.changeTextColor)
                             }
                         }
                     }

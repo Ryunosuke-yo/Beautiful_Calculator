@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct GlassLayout: View {
+    @Binding var showSetting: Bool
+    
     var body: some View {
         Text("glass")
     }
 }
 
 struct GlassLayout_Previews: PreviewProvider {
+    @State static var showSetting = false
     static var previews: some View {
-        GlassLayout()
+        GlassLayout(showSetting: $showSetting)
     }
 }

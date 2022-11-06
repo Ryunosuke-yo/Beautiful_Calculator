@@ -10,9 +10,11 @@ import SwiftUI
 
 struct SoftLayout: View {
     @EnvironmentObject private var colorView: ColorView
-    @State private var showSetting = false
+    @EnvironmentObject private var shadowViewModel: ShadowViewModel
+    @Binding var showSetting: Bool
     
     let answerSectionWidth = CalcUltils.scrrenWidth - 50
+    
     let buttons = CalcUltils.buttons
     let softBtnWidth = UIScreen.main.bounds.width / 5.2
     
@@ -84,9 +86,9 @@ struct SoftLayout: View {
                 .frame(maxWidth: answerSectionWidth)
                 .background(
                     RoundedRectangle(cornerRadius: 25)
-                        .fill(.shadow(.inner(color: .white.opacity(0.7), radius: 10, x:-10, y: -10))
-                            .shadow(.inner(color: .myBlack.opacity(0.2), radius: 5, x:5, y: 5)))
-                        .foregroundColor(.myWhite)
+                        .fill(.shadow(.inner(color: shadowViewModel.currentLeftShadow.opacity(0.5), radius: 5, x:-5, y: -8))
+                            .shadow(.inner(color: shadowViewModel.currentRightShadow.opacity(0.5), radius: 5, x:5, y: 5)))
+                        .foregroundColor(colorView.cuurentBgColor)
                     )
                     
                
@@ -96,6 +98,7 @@ struct SoftLayout: View {
                         ForEach(groups, id: \.self ) { value in
                             if value == CalcBtn.zero {
                                 Button(action: {
+                                   
                                 } , label: {
                                     Text(value.rawValue)
                                         .frame(width: softBtnWidth * 2, height: softBtnWidth)
@@ -127,9 +130,13 @@ struct SoftLayout: View {
     }
 }
 
+
+
 struct SoftLayout_Previews: PreviewProvider {
+    @State static var showSetting = false
     static var previews: some View {
-        SoftLayout()
+        SoftLayout(showSetting: $showSetting)
             .environmentObject(ColorView())
+            .environmentObject(ShadowViewModel())
     }
 }

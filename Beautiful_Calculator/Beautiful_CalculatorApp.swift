@@ -9,7 +9,6 @@ import SwiftUI
 
 @main
 struct Beautiful_CalculatorApp: App {
-    @EnvironmentObject var colorView: ColorView
     var body: some Scene {
         WindowGroup {
             ContentView()

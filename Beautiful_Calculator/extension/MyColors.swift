@@ -18,6 +18,15 @@ extension Color {
     static let whiteGray = Color("White_gray")
     static let shadowGray = Color("Shadow_gray")
     static let myWhite = Color("My_white")
+    
+    
+    static let myWhite_leftShadow = Color(.white)
+    static let myWhite_rightShadow = Color(.black)
+    static let myBlack_rightShadow = Color(.black)
+    static let myBlack_leftShadow = Color("My_black_shadow_left")
+    static let myRed_leftShadow = Color("My_red_shadow_left")
+    static let myGreen_leftShadow = Color("My_green_shadow_left")
+    static let myPurple_leftShadow = Color("My_purple_shadow_left")
 
 }
 

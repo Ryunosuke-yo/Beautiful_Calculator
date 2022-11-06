@@ -25,6 +25,11 @@
 		2B98F076290A64140086C7BA /* Jost-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B98F075290A64140086C7BA /* Jost-VariableFont_wght.ttf */; };
 		2B98F07B290A64F00086C7BA /* CalcBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98F07A290A64F00086C7BA /* CalcBtn.swift */; };
 		2BA2A121291393E90034A30C /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA2A120291393E90034A30C /* ColorView.swift */; };
+		2BC0A7F9291739BE00437609 /* ShadowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0A7F8291739BE00437609 /* ShadowViewModel.swift */; };
+		2BC0A7FB291744EE00437609 /* ConditionalShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0A7FA291744EE00437609 /* ConditionalShadow.swift */; };
+		2BC0A7FE291765D800437609 /* OptionCircleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0A7FD291765D800437609 /* OptionCircleStyle.swift */; };
+		2BC0A8002917684100437609 /* TextColorOptionCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0A7FF2917684100437609 /* TextColorOptionCircle.swift */; };
+		2BC0A80229176C3B00437609 /* ContentViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0A80129176C3B00437609 /* ContentViewExtension.swift */; };
 		2BDCCACD2916047C001A7D7D /* SoftBtnStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDCCACC2916047C001A7D7D /* SoftBtnStyle.swift */; };
 		2BE583772910EDCD00A76263 /* MyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE583762910EDCD00A76263 /* MyColors.swift */; };
 		2BE5837A2910F50700A76263 /* ColorOptionCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE583792910F50700A76263 /* ColorOptionCircle.swift */; };
@@ -71,6 +76,11 @@
 		2B98F075290A64140086C7BA /* Jost-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		2B98F07A290A64F00086C7BA /* CalcBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcBtn.swift; sourceTree = "<group>"; };
 		2BA2A120291393E90034A30C /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
+		2BC0A7F8291739BE00437609 /* ShadowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowViewModel.swift; sourceTree = "<group>"; };
+		2BC0A7FA291744EE00437609 /* ConditionalShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalShadow.swift; sourceTree = "<group>"; };
+		2BC0A7FD291765D800437609 /* OptionCircleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCircleStyle.swift; sourceTree = "<group>"; };
+		2BC0A7FF2917684100437609 /* TextColorOptionCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextColorOptionCircle.swift; sourceTree = "<group>"; };
+		2BC0A80129176C3B00437609 /* ContentViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewExtension.swift; sourceTree = "<group>"; };
 		2BDCCACC2916047C001A7D7D /* SoftBtnStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftBtnStyle.swift; sourceTree = "<group>"; };
 		2BE583762910EDCD00A76263 /* MyColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColors.swift; sourceTree = "<group>"; };
 		2BE583792910F50700A76263 /* ColorOptionCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorOptionCircle.swift; sourceTree = "<group>"; };
@@ -105,6 +115,7 @@
 		2B5AAD5C2914D41C006F5249 /* layout */ = {
 			isa = PBXGroup;
 			children = (
+				2BC0A7FC291744F400437609 /* customModifier */,
 				2BDCCAD1291635F4001A7D7D /* setting */,
 				2BDCCAD0291635C6001A7D7D /* envViewModels */,
 				2BDCCACF29163225001A7D7D /* simple */,
@@ -118,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				2BE583762910EDCD00A76263 /* MyColors.swift */,
+				2BC0A80129176C3B00437609 /* ContentViewExtension.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -210,6 +222,15 @@
 			path = enums;
 			sourceTree = "<group>";
 		};
+		2BC0A7FC291744F400437609 /* customModifier */ = {
+			isa = PBXGroup;
+			children = (
+				2BC0A7FA291744EE00437609 /* ConditionalShadow.swift */,
+				2BC0A7FD291765D800437609 /* OptionCircleStyle.swift */,
+			);
+			path = customModifier;
+			sourceTree = "<group>";
+		};
 		2BDCCACB29160425001A7D7D /* soft */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +261,7 @@
 			children = (
 				2BA2A120291393E90034A30C /* ColorView.swift */,
 				2B8DEB80291250200087D29E /* ThemeViewModel.swift */,
+				2BC0A7F8291739BE00437609 /* ShadowViewModel.swift */,
 			);
 			path = envViewModels;
 			sourceTree = "<group>";
@@ -248,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				2BE583792910F50700A76263 /* ColorOptionCircle.swift */,
+				2BC0A7FF2917684100437609 /* TextColorOptionCircle.swift */,
 				2BE5837B2910FE8900A76263 /* ThemeOptionView.swift */,
 				2B29303E290F3BB200EFAD34 /* SettingView.swift */,
 			);
@@ -393,16 +416,21 @@
 				2BE583772910EDCD00A76263 /* MyColors.swift in Sources */,
 				2B5AAD642914D969006F5249 /* AppEntry.swift in Sources */,
 				2B29303F290F3BB200EFAD34 /* SettingView.swift in Sources */,
+				2BC0A7FB291744EE00437609 /* ConditionalShadow.swift in Sources */,
 				2B5AAD622914D679006F5249 /* SoftLayout.swift in Sources */,
 				2BE5837A2910F50700A76263 /* ColorOptionCircle.swift in Sources */,
 				2B8DEB83291253C30087D29E /* Themes.swift in Sources */,
+				2BC0A7F9291739BE00437609 /* ShadowViewModel.swift in Sources */,
+				2BC0A80229176C3B00437609 /* ContentViewExtension.swift in Sources */,
 				2B98F07B290A64F00086C7BA /* CalcBtn.swift in Sources */,
 				2B98F04A290A63490086C7BA /* Beautiful_CalculatorApp.swift in Sources */,
 				2B5AAD662914DAD4006F5249 /* CalnUtils.swift in Sources */,
 				2B8DEB81291250200087D29E /* ThemeViewModel.swift in Sources */,
+				2BC0A7FE291765D800437609 /* OptionCircleStyle.swift in Sources */,
 				2B5AAD5E2914D465006F5249 /* SimpleLayout.swift in Sources */,
 				2BA2A121291393E90034A30C /* ColorView.swift in Sources */,
 				2B5AAD602914D663006F5249 /* GlassLayout.swift in Sources */,
+				2BC0A8002917684100437609 /* TextColorOptionCircle.swift in Sources */,
 				2BDCCACD2916047C001A7D7D /* SoftBtnStyle.swift in Sources */,
 				2BE5837C2910FE8900A76263 /* ThemeOptionView.swift in Sources */,
 			);
