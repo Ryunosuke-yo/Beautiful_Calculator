@@ -1,0 +1,4 @@
+- width and height for each btn
+- responsive for small devices
+- compatible with <ios 16
+- loadig screen?

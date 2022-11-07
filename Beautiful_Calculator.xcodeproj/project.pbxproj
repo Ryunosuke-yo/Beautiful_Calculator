@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2B29303F290F3BB200EFAD34 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B29303E290F3BB200EFAD34 /* SettingView.swift */; };
+		2B30AF8E2918705F000FC59E /* RandomBlob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B30AF8D2918705F000FC59E /* RandomBlob.swift */; };
+		2B30AF90291886BA000FC59E /* GlassBgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B30AF8F291886BA000FC59E /* GlassBgView.swift */; };
+		2B30AF922918E19D000FC59E /* todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2B30AF912918E19D000FC59E /* todo.txt */; };
 		2B5AAD5E2914D465006F5249 /* SimpleLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5AAD5D2914D465006F5249 /* SimpleLayout.swift */; };
 		2B5AAD602914D663006F5249 /* GlassLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5AAD5F2914D663006F5249 /* GlassLayout.swift */; };
 		2B5AAD622914D679006F5249 /* SoftLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5AAD612914D679006F5249 /* SoftLayout.swift */; };
@@ -55,6 +58,9 @@
 
 /* Begin PBXFileReference section */
 		2B29303E290F3BB200EFAD34 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		2B30AF8D2918705F000FC59E /* RandomBlob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBlob.swift; sourceTree = "<group>"; };
+		2B30AF8F291886BA000FC59E /* GlassBgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassBgView.swift; sourceTree = "<group>"; };
+		2B30AF912918E19D000FC59E /* todo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = todo.txt; sourceTree = "<group>"; };
 		2B5AAD5D2914D465006F5249 /* SimpleLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLayout.swift; sourceTree = "<group>"; };
 		2B5AAD5F2914D663006F5249 /* GlassLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassLayout.swift; sourceTree = "<group>"; };
 		2B5AAD612914D679006F5249 /* SoftLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftLayout.swift; sourceTree = "<group>"; };
@@ -164,6 +170,7 @@
 				2B98F077290A64280086C7BA /* fonts */,
 				2B98F073290A63CE0086C7BA /* Beautiful-Calculator-Info.plist */,
 				2B98F049290A63490086C7BA /* Beautiful_CalculatorApp.swift */,
+				2B30AF912918E19D000FC59E /* todo.txt */,
 				2B98F04B290A63490086C7BA /* ContentView.swift */,
 				2B5AAD632914D969006F5249 /* AppEntry.swift */,
 				2B98F04D290A634A0086C7BA /* Assets.xcassets */,
@@ -244,6 +251,8 @@
 			isa = PBXGroup;
 			children = (
 				2B5AAD5F2914D663006F5249 /* GlassLayout.swift */,
+				2B30AF8D2918705F000FC59E /* RandomBlob.swift */,
+				2B30AF8F291886BA000FC59E /* GlassBgView.swift */,
 			);
 			path = glass;
 			sourceTree = "<group>";
@@ -386,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B98F051290A634A0086C7BA /* Preview Assets.xcassets in Resources */,
+				2B30AF922918E19D000FC59E /* todo.txt in Resources */,
 				2B98F04E290A634A0086C7BA /* Assets.xcassets in Resources */,
 				2B98F076290A64140086C7BA /* Jost-VariableFont_wght.ttf in Resources */,
 			);
@@ -433,6 +443,8 @@
 				2BC0A8002917684100437609 /* TextColorOptionCircle.swift in Sources */,
 				2BDCCACD2916047C001A7D7D /* SoftBtnStyle.swift in Sources */,
 				2BE5837C2910FE8900A76263 /* ThemeOptionView.swift in Sources */,
+				2B30AF90291886BA000FC59E /* GlassBgView.swift in Sources */,
+				2B30AF8E2918705F000FC59E /* RandomBlob.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

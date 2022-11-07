@@ -28,6 +28,7 @@ struct ThemeOptionView: View {
                             Text(theme.rawValue)
                                 .font(.custom("Jost-Regular", size: 19))
                                 .tracking(2)
+                                .foregroundColor(.myBlack)
                             Spacer()
                             
                             
