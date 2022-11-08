@@ -16,6 +16,7 @@
 		2B5AAD622914D679006F5249 /* SoftLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5AAD612914D679006F5249 /* SoftLayout.swift */; };
 		2B5AAD642914D969006F5249 /* AppEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5AAD632914D969006F5249 /* AppEntry.swift */; };
 		2B5AAD662914DAD4006F5249 /* CalnUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5AAD652914DAD4006F5249 /* CalnUtils.swift */; };
+		2B60391B291A1F67001D45A8 /* Montserrat-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B60391A291A1F67001D45A8 /* Montserrat-VariableFont_wght.ttf */; };
 		2B8DEB81291250200087D29E /* ThemeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8DEB80291250200087D29E /* ThemeViewModel.swift */; };
 		2B8DEB83291253C30087D29E /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8DEB82291253C30087D29E /* Themes.swift */; };
 		2B98F04A290A63490086C7BA /* Beautiful_CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98F049290A63490086C7BA /* Beautiful_CalculatorApp.swift */; };
@@ -66,6 +67,7 @@
 		2B5AAD612914D679006F5249 /* SoftLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftLayout.swift; sourceTree = "<group>"; };
 		2B5AAD632914D969006F5249 /* AppEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEntry.swift; sourceTree = "<group>"; };
 		2B5AAD652914DAD4006F5249 /* CalnUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalnUtils.swift; sourceTree = "<group>"; };
+		2B60391A291A1F67001D45A8 /* Montserrat-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		2B8DEB80291250200087D29E /* ThemeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewModel.swift; sourceTree = "<group>"; };
 		2B8DEB82291253C30087D29E /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
 		2B98F046290A63490086C7BA /* Beautiful_Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beautiful_Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				2B98F075290A64140086C7BA /* Jost-VariableFont_wght.ttf */,
+				2B60391A291A1F67001D45A8 /* Montserrat-VariableFont_wght.ttf */,
 			);
 			path = fonts;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				2B30AF922918E19D000FC59E /* todo.txt in Resources */,
 				2B98F04E290A634A0086C7BA /* Assets.xcassets in Resources */,
 				2B98F076290A64140086C7BA /* Jost-VariableFont_wght.ttf in Resources */,
+				2B60391B291A1F67001D45A8 /* Montserrat-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

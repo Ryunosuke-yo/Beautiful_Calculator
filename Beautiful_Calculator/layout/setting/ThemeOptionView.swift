@@ -13,6 +13,7 @@ struct ThemeOptionView: View {
     
     
     let themesArray:[Themes] = [.soft, .glass, .simple]
+    let dividerWidth =  UIScreen.main.bounds.width - 65
     
     var body: some View {
         ZStack {
@@ -48,7 +49,7 @@ struct ThemeOptionView: View {
                         
                         Rectangle()
                             .fill(.gray)
-                            .frame(width: CalcUltils.dividerWidth, height: 1)
+                            .frame(width: dividerWidth, height: 1)
                             .padding(.vertical, 3)
                     }
                     .padding([.trailing, .leading], 40)

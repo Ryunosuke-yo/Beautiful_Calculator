@@ -16,7 +16,10 @@ struct GlassLayout: View {
     
     let glassCalcFieldWidth = UIScreen.main.bounds.width - 35
     let glassCalcBtnWidth = UIScreen.main.bounds.width
-    let glassCalcBtnHeight = UIScreen.main.bounds.height / 2
+    let glassCalcBtnHeight = UIScreen.main.bounds.height / 1.6
+    
+    let btnSize = UIScreen.main.bounds.width / 6
+    
    
     
     
@@ -33,7 +36,7 @@ struct GlassLayout: View {
                 .position(x:-80, y: -250)
                 .frame(width: 210, height: 210)
             
-            VStack(spacing: 0) {
+            VStack(spacing: 10) {
                 Spacer()
                 HStack {
                     Spacer()
@@ -47,7 +50,7 @@ struct GlassLayout: View {
                     }
                     .foregroundColor(colorView.currentTextColor)
                     .font(.system(size: 15))
-                    .position(x:40, y:40)
+                    .position(x:20, y:40)
                     .sheet(isPresented: $showSetting) {
                         SettingView(showSetting: $showSetting)
                             .presentationDetents([.fraction(0.55)])
@@ -64,7 +67,7 @@ struct GlassLayout: View {
                     }
                     .foregroundColor(colorView.currentTextColor)
                     .font(.system(size: 15))
-                    .position(x:-78, y:100)
+                    .position(x:-101, y:90)
                     .sheet(isPresented: $showSetting) {
                         SettingView(showSetting: $showSetting)
                             .presentationDetents([.fraction(0.55)])
@@ -74,17 +77,17 @@ struct GlassLayout: View {
                     VStack(alignment: .trailing) {
                         Text("3 + 4 = ")
                             .foregroundColor(colorView.currentTextColor)
-                            .font(.custom("Jost-Regular", size: 21))
+                            .font(.custom("MontserratRoman-Regular", size: 21))
                         Text("7")
                             .foregroundColor(colorView.currentTextColor)
-                            .font(.custom("Jost-Regular", size: 23))
+                            .font(.custom("MontserratRoman-Regular", size: 23))
                         Text("3 + 4 = ")
                             .foregroundColor(colorView.currentTextColor)
-                            .font(.custom("Jost-Regular", size: 21))
+                            .font(.custom("MontserratRoman-Regular", size: 21))
                            
                             Text("0")
                                 .foregroundColor(colorView.currentTextColor)
-                                .font(.custom("Jost-Regular", size: 60))
+                                .font(.custom("MontserratRoman-Regular", size: 60))
                         
                     }
                     .padding()
@@ -105,7 +108,8 @@ struct GlassLayout: View {
                                        
                                     } , label: {
                                         Text(value.rawValue)
-                                            .frame(width: 40, height: 40)
+                                            .font(.custom("MontserratRoman-Regular", size: 25))
+                                            .frame(width: btnSize * 2, height: 30)
                                             .foregroundColor(colorView.currentTextColor)
                                             
                                     })
@@ -115,7 +119,8 @@ struct GlassLayout: View {
                                     Button(action: {
                                     } , label: {
                                         Text(value.rawValue)
-                                            .frame(width: 40, height: 40)
+                                            .font(.custom("MontserratRoman-Regular", size: 30))
+                                            .frame(width: btnSize, height: 90)
                                             .foregroundColor(colorView.currentTextColor)
                                             
                                     })
@@ -151,7 +156,7 @@ struct GlassLayout: View {
             RoundedRectangle(cornerRadius: 25, style: .continuous)
                 .fill(.ultraThinMaterial)
                 .foregroundColor(.glassBgWhite)
-                .opacity(0.6)
+                .opacity(0.3)
             
             
             RoundedRectangle(cornerRadius: 25, style: .continuous)
@@ -161,7 +166,7 @@ struct GlassLayout: View {
                         .glassBgWhite.opacity(0.2)
                         
                     ], startPoint: .topLeading, endPoint: .bottomTrailing))
-                .opacity(0.4)
+                .opacity(0.5)
             
             
             

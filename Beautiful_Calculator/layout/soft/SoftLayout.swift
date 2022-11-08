@@ -13,7 +13,7 @@ struct SoftLayout: View {
     @EnvironmentObject private var shadowViewModel: ShadowViewModel
     @Binding var showSetting: Bool
     
-    let answerSectionWidth = CalcUltils.scrrenWidth - 50
+    let answerSectionWidth = UIScreen.main.bounds.width - 50
     
     let buttons = CalcUltils.buttons
     let softBtnWidth = UIScreen.main.bounds.width / 5.2

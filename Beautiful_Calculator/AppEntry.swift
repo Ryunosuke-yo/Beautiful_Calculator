@@ -12,15 +12,15 @@ struct AppEntry: View {
     @StateObject private var viewModel = ViewModel()
     
     
-    //    init(){
-    //        for family in UIFont.familyNames {
-    //             print(family)
-    //
-    //             for names in UIFont.fontNames(forFamilyName: family){
-    //             print("== \(names)")
-    //             }
-    //        }
-    //    }
+//        init(){
+//            for family in UIFont.familyNames {
+//                 print(family)
+//    
+//                 for names in UIFont.fontNames(forFamilyName: family){
+//                 print("== \(names)")
+//                 }
+//            }
+//        }
         
         
     

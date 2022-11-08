@@ -18,19 +18,5 @@ struct CalcUltils{
         [.one, .two, .theree, .plus],
         [.zero, .dot, .equal]
     ]
-    
-    static let dividerWidth = UIScreen.main.bounds.width - 65
-    
-    static let scrrenWidth = UIScreen.main.bounds.width
-    
-    static func btnWidth(_ btnValue: CalcBtn)-> CGFloat {
-        let btn = UIScreen.main.bounds.width / 5
-        return btnValue == .zero ? btn * 2 : btn
-    }
-    
-    static func btnHeight()-> CGFloat {
-        UIScreen.main.bounds.height / 8
-    }
-    
-    
+ 
 }
