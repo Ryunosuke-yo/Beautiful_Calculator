@@ -24,7 +24,7 @@ enum CalcBtn: String {
          multiply = "x",
          plus = "+",
          minus = "-",
-         dot = ".",
+         coma = ".",
          equal = "="
     
 }

@@ -16,7 +16,7 @@ struct CalcUltils{
         [.seven, .eight, .nine, .multiply],
         [.four, .five, .six, .minus],
         [.one, .two, .theree, .plus],
-        [.zero, .dot, .equal]
+        [.zero, .coma, .equal]
     ]
  
 }

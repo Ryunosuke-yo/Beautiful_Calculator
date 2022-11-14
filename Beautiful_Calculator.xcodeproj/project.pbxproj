@@ -11,6 +11,7 @@
 		2B30AF8E2918705F000FC59E /* RandomBlob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B30AF8D2918705F000FC59E /* RandomBlob.swift */; };
 		2B30AF90291886BA000FC59E /* GlassBgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B30AF8F291886BA000FC59E /* GlassBgView.swift */; };
 		2B30AF922918E19D000FC59E /* todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2B30AF912918E19D000FC59E /* todo.txt */; };
+		2B5677382921C9010076869E /* CalculationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5677372921C9010076869E /* CalculationState.swift */; };
 		2B5AAD5E2914D465006F5249 /* SimpleLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5AAD5D2914D465006F5249 /* SimpleLayout.swift */; };
 		2B5AAD602914D663006F5249 /* GlassLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5AAD5F2914D663006F5249 /* GlassLayout.swift */; };
 		2B5AAD622914D679006F5249 /* SoftLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5AAD612914D679006F5249 /* SoftLayout.swift */; };
@@ -38,6 +39,7 @@
 		2BE583772910EDCD00A76263 /* MyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE583762910EDCD00A76263 /* MyColors.swift */; };
 		2BE5837A2910F50700A76263 /* ColorOptionCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE583792910F50700A76263 /* ColorOptionCircle.swift */; };
 		2BE5837C2910FE8900A76263 /* ThemeOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5837B2910FE8900A76263 /* ThemeOptionView.swift */; };
+		2BF3FE40291B76BF00C2611E /* Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF3FE3F291B76BF00C2611E /* Calculation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,7 @@
 		2B30AF8D2918705F000FC59E /* RandomBlob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBlob.swift; sourceTree = "<group>"; };
 		2B30AF8F291886BA000FC59E /* GlassBgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassBgView.swift; sourceTree = "<group>"; };
 		2B30AF912918E19D000FC59E /* todo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = todo.txt; sourceTree = "<group>"; };
+		2B5677372921C9010076869E /* CalculationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationState.swift; sourceTree = "<group>"; };
 		2B5AAD5D2914D465006F5249 /* SimpleLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLayout.swift; sourceTree = "<group>"; };
 		2B5AAD5F2914D663006F5249 /* GlassLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassLayout.swift; sourceTree = "<group>"; };
 		2B5AAD612914D679006F5249 /* SoftLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftLayout.swift; sourceTree = "<group>"; };
@@ -93,6 +96,7 @@
 		2BE583762910EDCD00A76263 /* MyColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColors.swift; sourceTree = "<group>"; };
 		2BE583792910F50700A76263 /* ColorOptionCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorOptionCircle.swift; sourceTree = "<group>"; };
 		2BE5837B2910FE8900A76263 /* ThemeOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeOptionView.swift; sourceTree = "<group>"; };
+		2BF3FE3F291B76BF00C2611E /* Calculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				2B5AAD652914DAD4006F5249 /* CalnUtils.swift */,
+				2BF3FE3F291B76BF00C2611E /* Calculation.swift */,
 			);
 			path = structs;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 			children = (
 				2B98F07A290A64F00086C7BA /* CalcBtn.swift */,
 				2B8DEB82291253C30087D29E /* Themes.swift */,
+				2B5677372921C9010076869E /* CalculationState.swift */,
 			);
 			path = enums;
 			sourceTree = "<group>";
@@ -426,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B5677382921C9010076869E /* CalculationState.swift in Sources */,
 				2B98F04C290A63490086C7BA /* ContentView.swift in Sources */,
 				2BE583772910EDCD00A76263 /* MyColors.swift in Sources */,
 				2B5AAD642914D969006F5249 /* AppEntry.swift in Sources */,
@@ -445,6 +452,7 @@
 				2BA2A121291393E90034A30C /* ColorView.swift in Sources */,
 				2B5AAD602914D663006F5249 /* GlassLayout.swift in Sources */,
 				2BC0A8002917684100437609 /* TextColorOptionCircle.swift in Sources */,
+				2BF3FE40291B76BF00C2611E /* Calculation.swift in Sources */,
 				2BDCCACD2916047C001A7D7D /* SoftBtnStyle.swift in Sources */,
 				2BE5837C2910FE8900A76263 /* ThemeOptionView.swift in Sources */,
 				2B30AF90291886BA000FC59E /* GlassBgView.swift in Sources */,

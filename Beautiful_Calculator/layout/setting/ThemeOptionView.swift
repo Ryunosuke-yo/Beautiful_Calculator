@@ -13,7 +13,7 @@ struct ThemeOptionView: View {
     
     
     let themesArray:[Themes] = [.soft, .glass, .simple]
-    let dividerWidth =  UIScreen.main.bounds.width - 65
+    let dividerWidth = UIScreen.main.bounds.width - 65
     
     var body: some View {
         ZStack {
