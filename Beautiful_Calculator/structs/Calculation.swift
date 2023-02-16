@@ -12,26 +12,45 @@ class Calculation: ObservableObject {
     @Published var secondValue: String = "0"
     @Published var answer: String?  = nil
     @Published var calculationState: CalculationState = .initialized
-
+    var disableSigns = false
+    var disableEqual = false
+    
     
     
     func pressedBtns(value: CalcBtn) {
         switch value {
         case .plus:
+            disableEqual = false
             pressedPlus()
+            disableSigns = true
         case .minus:
+            disableEqual = false
             pressedMinus()
+            disableSigns = true
         case .multiply:
-            print("multiply")
+            disableEqual = false
+            pressedMultiply()
+            disableSigns = true
         case .divide:
-            print("divide")
+            disableEqual = false
+            pressedDivide()
+            disableSigns = true
         case .ac:
+            disableEqual = false
             resetToZero()
+            disableSigns = false
         case .equal:
+            disableSigns = false
             calculate(calculationState)
+            disableEqual = true
         case .coma:
+            disableEqual = false
             pressedComa(value: value)
+        case .negative:
+            pressedNegative()
         default:
+            disableSigns = false
+            disableEqual = false
             appendNumToNumberValue(value: value)
         }
         
@@ -63,15 +82,39 @@ class Calculation: ObservableObject {
         if firstValue.contains(".") {
             return
         }
+        
         firstValue += value.rawValue
+        answer = firstValue
+        
+    }
+    
+    func pressedNegative() {
+        
+        if firstValue == "0" {
+            return
+        }
+        
+        if firstValue.contains("-") {
+            let deleted = firstValue.replacingOccurrences(of:"-", with:"")
+            firstValue = deleted
+        } else {
+            firstValue = "-\(firstValue)"
+        }
+        
+        answer = firstValue
+        
     }
     
     func pressedPlus() {
+        if disableSigns {
+            return
+        }
         
         
         if firstValue != "0" && secondValue != "0" {
             storePrevCalcResult()
-            answer = secondValue
+            let secondNum = Double(secondValue) ?? 0
+            secondValue = handleDecimal(secondNum)
         } else {
             secondValue = firstValue
             
@@ -82,15 +125,56 @@ class Calculation: ObservableObject {
         
     }
     
+    
+    
     func pressedMinus() {
+        if disableSigns {
+            return
+        }
         
         if firstValue != "0" && secondValue != "0"  {
             storePrevCalcResult()
-            answer = secondValue
+            let secondNum = Double(secondValue) ?? 0
+            secondValue = handleDecimal(secondNum)
         }  else {
             secondValue = firstValue
         }
         calculationState = .subtraction
+        firstValue = "0"
+        answer = nil
+    }
+    
+    func pressedMultiply() {
+        if disableSigns {
+            return
+        }
+        
+        if firstValue != "0" && secondValue != "0"  {
+            storePrevCalcResult()
+            let secondNum = Double(secondValue) ?? 0
+            secondValue = handleDecimal(secondNum)
+        }  else {
+            secondValue = firstValue
+        }
+        calculationState = .multiplication
+        firstValue = "0"
+        answer = nil
+    }
+    
+    func pressedDivide() {
+        if disableSigns {
+            return
+        }
+        
+        if firstValue != "0" && secondValue != "0"  {
+            storePrevCalcResult()
+            let secondNum = Double(secondValue) ?? 0
+            secondValue = handleDecimal(secondNum)
+            
+        }  else {
+            secondValue = firstValue
+        }
+        calculationState = .division
         firstValue = "0"
         answer = nil
     }
@@ -107,6 +191,9 @@ class Calculation: ObservableObject {
     
     // func to do calculation
     func calculate(_ currentState: CalculationState) {
+        if disableEqual {
+            return
+        }
         let firstNum = Double(firstValue) ?? 0
         let secondNum = Double(secondValue) ?? 0
         var answerNum: Double = 0
@@ -116,7 +203,7 @@ class Calculation: ObservableObject {
         case .subtraction:
             answerNum =  secondNum - firstNum
         case .division:
-            answerNum =  secondNum - firstNum
+            answerNum =  secondNum / firstNum
         case .multiplication:
             answerNum =   secondNum * firstNum
         default :
@@ -125,16 +212,17 @@ class Calculation: ObservableObject {
         }
         firstValue = "0"
         secondValue = "0"
-        
-        
-        let decimal = secondNum.truncatingRemainder(dividingBy: 1)
+        answer = handleDecimal(answerNum)
+    
+    }
+    
+    func handleDecimal (_ num: Double) -> String {
+        let decimal = num.truncatingRemainder(dividingBy: 1)
         
         if abs(decimal.truncatingRemainder(dividingBy: 1)).isLess(than: .ulpOfOne) {
-            answer = String(Int(answerNum))
-            print("nasi")
+            return String(Int(num))
         } else {
-            answer = String(answerNum)
-            print("ari")
+            return  String(num)
         }
     }
     
@@ -144,14 +232,14 @@ class Calculation: ObservableObject {
         switch calculationState {
         case .addtion :
             secondValue = String(secondNum + firstNum)
-        case .multiplication :
-            secondValue = String(secondNum / firstNum)
-        case .division :
-            secondValue = String(secondNum * firstNum)
-        case .initialized:
-            print("ini")
         case .subtraction:
             secondValue = String(secondNum - firstNum)
+        case .multiplication :
+            secondValue = String(secondNum * firstNum)
+        case .division :
+            secondValue = String(secondNum / firstNum)
+        case .initialized:
+            print("ini")
         }
     }
 }

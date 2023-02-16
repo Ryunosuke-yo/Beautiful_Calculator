@@ -45,24 +45,6 @@ struct SoftLayout: View {
                                 .presentationDetents([.fraction(0.55)])
                         }
                         
-                        Button {
-                            showSetting.toggle()
-                        } label: {
-                            Image(systemName: "circle.grid.cross")
-                                .frame(width: 40, height: 40)
-                                .foregroundColor(colorView.currentTextColor)
-                            
-                            
-                        }
-                        .foregroundColor(colorView.currentTextColor)
-                        .font(.system(size: 15))
-                        .buttonStyle(SoftBtnStyle(isRectangle: false))
-                        .position(x:-78, y:40)
-                        .sheet(isPresented: $showSetting) {
-                            SettingView(showSetting: $showSetting)
-                                .presentationDetents([.fraction(0.55)])
-                        }
-                        .padding([.trailing], 40)
                     }
                     
                     HStack(spacing: 10) {
