@@ -50,7 +50,7 @@ struct SoftLayout: View {
                     HStack(spacing: 10) {
                         Spacer()
                         
-                        Text(calculation.answer != nil ? calculation.answer! : calculation.secondValue)
+                        Text(calculation.answer != nil ? calculation.answer! : calculation.secondValue != nil ? calculation.secondValue! : "0")
                             .foregroundColor(colorView.currentTextColor)
                             .font(.custom("Jost-Regular", size: 60))
                             .lineLimit(1)

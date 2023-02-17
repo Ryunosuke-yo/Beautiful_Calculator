@@ -8,8 +8,8 @@
 import Foundation
 
 class Calculation: ObservableObject {
-    @Published var firstValue: String = "0"
-    @Published var secondValue: String = "0"
+    @Published var firstValue: String? = nil
+    @Published var secondValue: String? = nil
     @Published var answer: String?  = nil
     @Published var calculationState: CalculationState = .initialized
     var disableSigns = false
@@ -44,10 +44,13 @@ class Calculation: ObservableObject {
             calculate(calculationState)
             disableEqual = true
         case .coma:
-            disableEqual = false
+            disableEqual = true
             pressedComa(value: value)
         case .negative:
+            disableEqual = true
             pressedNegative()
+        case .percent:
+            pressedPercent()
         default:
             disableSigns = false
             disableEqual = false
@@ -57,9 +60,16 @@ class Calculation: ObservableObject {
     }
     
     func appendNumToNumberValue(value: CalcBtn) {
+       
         if  answer != nil &&  answer!.count >= 10 {
             return;
         }
+        
+        if answer != nil && answer!.first! == "0" && !answer!.contains(".") {
+            firstValue?.removeFirst()
+            answer?.removeFirst()
+        }
+        
         
         if answer == nil {
             firstValue = value.rawValue
@@ -68,8 +78,14 @@ class Calculation: ObservableObject {
         }
         
         
-        firstValue += value.rawValue
+        firstValue! += value.rawValue
         answer! += value.rawValue
+        
+        if firstValue == "00" {
+            firstValue = "0"
+            answer = "0"
+           
+        }
         
         
     }
@@ -79,48 +95,45 @@ class Calculation: ObservableObject {
             firstValue = "0"
         }
         
-        if firstValue.contains(".") {
+        if firstValue!.contains(".") {
             return
         }
         
-        firstValue += value.rawValue
+        firstValue! += value.rawValue
         answer = firstValue
         
     }
     
     func pressedNegative() {
         
-        if firstValue == "0" {
+        if firstValue == "0" || firstValue == nil {
             return
         }
         
-        if firstValue.contains("-") {
-            let deleted = firstValue.replacingOccurrences(of:"-", with:"")
+        if firstValue!.contains("-") {
+            let deleted = firstValue!.replacingOccurrences(of:"-", with:"")
             firstValue = deleted
         } else {
-            firstValue = "-\(firstValue)"
+            firstValue = "-\(firstValue!)"
         }
         
         answer = firstValue
-        
     }
     
-    func pressedPlus() {
-        if disableSigns {
+    func pressedPercent() {
+        if firstValue == "0" || firstValue == nil {
             return
         }
         
-        
-        if firstValue != "0" && secondValue != "0" {
-            storePrevCalcResult()
-            let secondNum = Double(secondValue) ?? 0
-            secondValue = handleDecimal(secondNum)
-        } else {
-            secondValue = firstValue
-            
-        }
+        firstValue = "0.0\(firstValue!)"
+        answer = firstValue
+    }
+    
+    
+    func pressedPlus() {
+       handleContinuousCalculation()
         calculationState = .addtion
-        firstValue = "0"
+        firstValue = nil
         answer = nil
         
     }
@@ -128,64 +141,50 @@ class Calculation: ObservableObject {
     
     
     func pressedMinus() {
-        if disableSigns {
-            return
-        }
-        
-        if firstValue != "0" && secondValue != "0"  {
-            storePrevCalcResult()
-            let secondNum = Double(secondValue) ?? 0
-            secondValue = handleDecimal(secondNum)
-        }  else {
-            secondValue = firstValue
-        }
+       handleContinuousCalculation()
         calculationState = .subtraction
-        firstValue = "0"
+        firstValue = nil
         answer = nil
     }
     
     func pressedMultiply() {
-        if disableSigns {
-            return
-        }
-        
-        if firstValue != "0" && secondValue != "0"  {
-            storePrevCalcResult()
-            let secondNum = Double(secondValue) ?? 0
-            secondValue = handleDecimal(secondNum)
-        }  else {
-            secondValue = firstValue
-        }
+        handleContinuousCalculation()
         calculationState = .multiplication
-        firstValue = "0"
+        firstValue = nil
         answer = nil
     }
     
     func pressedDivide() {
+        handleContinuousCalculation()
+       
+        calculationState = .division
+        firstValue = nil
+        answer = nil
+    }
+    
+   
+    
+    func resetToZero() {
+        firstValue = nil
+        secondValue = nil
+        answer = nil
+    }
+    
+    
+    func handleContinuousCalculation() {
         if disableSigns {
             return
         }
         
-        if firstValue != "0" && secondValue != "0"  {
+        if firstValue != nil && secondValue != nil  {
             storePrevCalcResult()
-            let secondNum = Double(secondValue) ?? 0
+            let secondNum = Double(secondValue!) ?? 0
             secondValue = handleDecimal(secondNum)
             
         }  else {
             secondValue = firstValue
         }
-        calculationState = .division
-        firstValue = "0"
-        answer = nil
     }
-    
-    
-    func resetToZero() {
-        firstValue = "0"
-        secondValue = "0"
-        answer = nil
-    }
-    
     
     
     
@@ -194,8 +193,8 @@ class Calculation: ObservableObject {
         if disableEqual {
             return
         }
-        let firstNum = Double(firstValue) ?? 0
-        let secondNum = Double(secondValue) ?? 0
+        let firstNum = Double(firstValue!) ?? 0
+        let secondNum = Double(secondValue!) ?? 0
         var answerNum: Double = 0
         switch currentState {
         case .addtion:
@@ -227,8 +226,8 @@ class Calculation: ObservableObject {
     }
     
     func storePrevCalcResult () {
-        let firstNum = Double(firstValue) ?? 0
-        let secondNum = Double(secondValue) ?? 0
+        let firstNum = Double(firstValue!) ?? 0
+        let secondNum = Double(secondValue!) ?? 0
         switch calculationState {
         case .addtion :
             secondValue = String(secondNum + firstNum)
