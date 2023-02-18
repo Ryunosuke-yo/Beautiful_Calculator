@@ -13,53 +13,58 @@ class Calculation: ObservableObject {
     @Published var answer: String?  = nil
     @Published var calculationState: CalculationState = .initialized
     var disableSigns = false
-    var disableEqual = false
-    
+   
     
     
     func pressedBtns(value: CalcBtn) {
         switch value {
         case .plus:
-            disableEqual = false
+           
             pressedPlus()
             disableSigns = true
         case .minus:
-            disableEqual = false
+           
             pressedMinus()
             disableSigns = true
         case .multiply:
-            disableEqual = false
+         
             pressedMultiply()
             disableSigns = true
         case .divide:
-            disableEqual = false
+          
             pressedDivide()
             disableSigns = true
         case .ac:
-            disableEqual = false
+         
             resetToZero()
             disableSigns = false
         case .equal:
+            if firstValue == nil || secondValue == nil {
+                return
+            }
             disableSigns = false
             calculate(calculationState)
-            disableEqual = true
+           
         case .coma:
-            disableEqual = true
+           
             pressedComa(value: value)
         case .negative:
-            disableEqual = true
+          
             pressedNegative()
         case .percent:
             pressedPercent()
         default:
             disableSigns = false
-            disableEqual = false
             appendNumToNumberValue(value: value)
         }
         
     }
     
     func appendNumToNumberValue(value: CalcBtn) {
+      
+        if firstValue == nil && secondValue == nil && answer != nil {
+            answer = nil
+        }
        
         if  answer != nil &&  answer!.count >= 10 {
             return;
@@ -125,7 +130,11 @@ class Calculation: ObservableObject {
             return
         }
         
-        firstValue = "0.0\(firstValue!)"
+        let firstNum = Double(firstValue!) ?? 0
+        let firNumPer = firstNum / 100
+      
+        
+        firstValue = "\(firNumPer)"
         answer = firstValue
     }
     
@@ -181,7 +190,11 @@ class Calculation: ObservableObject {
             let secondNum = Double(secondValue!) ?? 0
             secondValue = handleDecimal(secondNum)
             
-        }  else {
+        }  else if firstValue == nil && secondValue == nil && answer != nil {
+            secondValue = answer
+            answer = nil
+            
+        } else {
             secondValue = firstValue
         }
     }
@@ -190,9 +203,7 @@ class Calculation: ObservableObject {
     
     // func to do calculation
     func calculate(_ currentState: CalculationState) {
-        if disableEqual {
-            return
-        }
+        
         let firstNum = Double(firstValue!) ?? 0
         let secondNum = Double(secondValue!) ?? 0
         var answerNum: Double = 0
@@ -209,8 +220,8 @@ class Calculation: ObservableObject {
             break
             
         }
-        firstValue = "0"
-        secondValue = "0"
+        firstValue = nil
+        secondValue = nil
         answer = handleDecimal(answerNum)
     
     }
