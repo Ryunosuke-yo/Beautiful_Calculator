@@ -12,8 +12,19 @@ struct SettingView: View {
     @Binding var showSetting: Bool
     @EnvironmentObject private var colorView: ColorView
     @EnvironmentObject private var shadowViewModel: ShadowViewModel
+    @EnvironmentObject private var themeViewModel: ThemeViewModel
     
-//    let colorOptions:[Color] = [.myWhite, .myBlack, .myRed, .myGreen, .myPurple]
+    func getSelectedThemeString()-> String {
+        if themeViewModel.isGlass {
+            return Themes.glass.rawValue
+        }
+        
+        if themeViewModel.isSimple {
+            return Themes.simple.rawValue
+        }
+        
+        return Themes.soft.rawValue
+    }
     
     let colorOptions:[[Color]] = [
         [.myWhite, .myWhite_leftShadow, .myWhite_rightShadow],
@@ -89,7 +100,7 @@ struct SettingView: View {
                                 .font(.custom("Jost-Regular", size: 19))
                                 .tracking(2)
                             Spacer()
-                            Text("Soft")
+                            Text(getSelectedThemeString())
                                 .foregroundColor(.gray)
                                 .font(.custom("Jost-Regular", size: 19))
                                 .tracking(2)

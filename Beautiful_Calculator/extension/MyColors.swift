@@ -28,6 +28,31 @@ extension Color {
     static let myRed_leftShadow = Color("My_red_shadow_left")
     static let myGreen_leftShadow = Color("My_green_shadow_left")
     static let myPurple_leftShadow = Color("My_purple_shadow_left")
+    
+    var getNameString: String? {
+        switch self {
+        case .myBlack: return ColorName.myBlack.rawValue
+        case .myRed: return ColorName.myRed.rawValue
+        case .myPurple: return ColorName.myPurple.rawValue
+        case .whiteGray: return ColorName.whiteGray.rawValue
+        case .myWhite: return ColorName.myWhite.rawValue
+        case .glassBgWhite: return ColorName.glassBgWhite.rawValue
+        default: return nil
+        }
+    }
+    
+    static func getColorValue(colorString: String)-> Color {
+        switch colorString {
+        case ColorName.myBlack.rawValue: return .myBlack
+        case ColorName.myRed.rawValue: return .myRed
+        case ColorName.myGreen.rawValue : return .myGreen
+        case ColorName.myPurple.rawValue: return .myPurple
+        case ColorName.whiteGray.rawValue: return .whiteGray
+        case ColorName.myWhite.rawValue: return .myWhite
+        case ColorName.glassBgWhite.rawValue: return .glassBgWhite
+        default: return .myBlack
+        }
+    }
 
 }
 

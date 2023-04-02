@@ -33,14 +33,14 @@ struct ThemeOptionView: View {
                             Spacer()
                             
                             
-                           showChechMark(theme)
+                            showChechMark(theme)?.foregroundColor(.myBlack)
                         }
+                        .contentShape(Rectangle())
                         .onTapGesture {
                             if theme == Themes.soft {
                                 themeViewModel.setIsSoft()
                             } else if theme == Themes.glass {
                                 themeViewModel.setIsGlass()
-                                print("glass")
                             } else if theme == Themes.simple {
                                 themeViewModel.setIsSimple()
                             }
@@ -66,7 +66,7 @@ struct ThemeOptionView: View {
     
     func showChechMark(_ theme: Themes) -> Image? {
         if theme == Themes.soft {
-             return themeViewModel.isSoft ? Image(systemName: "checkmark") : nil
+            return themeViewModel.isSoft ? Image(systemName: "checkmark") : nil
         } else if theme == Themes.glass {
             return themeViewModel.isGlass ? Image(systemName: "checkmark") : nil
         } else if theme == Themes.simple {

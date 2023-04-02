@@ -8,7 +8,7 @@
 import Foundation
 
 
-extension AppEntry {
+extension LayoutView {
     @MainActor class ViewModel: ObservableObject {
         @Published var showSetting = false
     }

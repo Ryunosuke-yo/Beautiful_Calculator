@@ -11,6 +11,7 @@ import SwiftUI
 struct GlassLayout: View {
     @Binding var showSetting: Bool
     @EnvironmentObject private var colorView: ColorView
+    @EnvironmentObject private var calculation: Calculation
     
     let buttons = CalcUltils.buttons
     
@@ -20,7 +21,7 @@ struct GlassLayout: View {
     
     let btnSize = UIScreen.main.bounds.width / 6
     
-   
+    
     
     
     var body: some View {
@@ -46,7 +47,7 @@ struct GlassLayout: View {
                         Image(systemName: "gearshape.fill")
                             .frame(width: 40, height: 40)
                         
-
+                        
                     }
                     .foregroundColor(colorView.currentTextColor)
                     .font(.system(size: 15))
@@ -56,48 +57,28 @@ struct GlassLayout: View {
                             .presentationDetents([.fraction(0.55)])
                     }
                     
-                    Button {
-                        showSetting.toggle()
-                    } label: {
-                        Image(systemName: "circle.grid.cross")
-                            .frame(width: 40, height: 40)
-                            .foregroundColor(colorView.currentTextColor)
-                        
-
-                    }
-                    .foregroundColor(colorView.currentTextColor)
-                    .font(.system(size: 15))
-                    .position(x:-101, y:90)
-                    .sheet(isPresented: $showSetting) {
-                        SettingView(showSetting: $showSetting)
-                            .presentationDetents([.fraction(0.55)])
-                    }
-                    
-                    
-                    VStack(alignment: .trailing) {
-                        Text("3 + 4 = ")
-                            .foregroundColor(colorView.currentTextColor)
-                            .font(.custom("MontserratRoman-Regular", size: 21))
-                        Text("7")
-                            .foregroundColor(colorView.currentTextColor)
-                            .font(.custom("MontserratRoman-Regular", size: 23))
-                        Text("3 + 4 = ")
-                            .foregroundColor(colorView.currentTextColor)
-                            .font(.custom("MontserratRoman-Regular", size: 21))
-                           
-                            Text("0")
+                    VStack {
+                        Spacer()
+                        HStack {
+                            Spacer()
+                            
+                            Text(calculation.answer != nil ? calculation.answer! : calculation.secondValue != nil ? calculation.secondValue! : "0")
+                                .lineLimit(1)
+                                .minimumScaleFactor(0.4)
                                 .foregroundColor(colorView.currentTextColor)
                                 .font(.custom("MontserratRoman-Regular", size: 60))
-                        
+                        }
                     }
+                    .frame(width: 290)
                     .padding()
+                    
+                    
+                    
                 }
+                .foregroundColor(.myWhite)
+                .frame(width: glassCalcFieldWidth, height: 200)
+                .background(glassBgView())
                 
-                
-                    .foregroundColor(.myWhite)
-                    .frame(width: glassCalcFieldWidth, height: 200)
-                    .background(glassBgView())
-                   
                 Spacer()
                 VStack {
                     ForEach(buttons, id: \.self ) { groups in
@@ -105,30 +86,31 @@ struct GlassLayout: View {
                             ForEach(groups, id: \.self ) { value in
                                 if value == CalcBtn.zero {
                                     Button(action: {
-                                       
+                                        calculation.pressedBtns(value: value)
                                     } , label: {
                                         Text(value.rawValue)
                                             .font(.custom("MontserratRoman-Regular", size: 25))
                                             .frame(width: btnSize * 2, height: 30)
                                             .foregroundColor(colorView.currentTextColor)
-                                            
+                                        
                                     })
                                     
                                     .padding()
                                 } else {
                                     Button(action: {
+                                        calculation.pressedBtns(value: value)
                                     } , label: {
                                         Text(value.rawValue)
                                             .font(.custom("MontserratRoman-Regular", size: 30))
                                             .frame(width: btnSize, height: 90)
                                             .foregroundColor(colorView.currentTextColor)
-                                            
+                                        
                                     })
                                     
                                     .padding(3)
                                 }
                                 
-
+                                
                             }
                         }
                     }
@@ -141,9 +123,9 @@ struct GlassLayout: View {
                 
                 
             }
-           
-
-                
+            
+            
+            
             
             
             
@@ -180,7 +162,7 @@ struct GlassLayout: View {
                         
                     ], startPoint: .topLeading, endPoint: .bottomTrailing),
                     lineWidth: 2)
-
+            
         }
         .shadow(color: .black.opacity(0.3), radius: 6, x: 10, y: 5)
         

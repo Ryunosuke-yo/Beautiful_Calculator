@@ -97,7 +97,20 @@ class Calculation: ObservableObject {
     
     func pressedComa(value: CalcBtn) {
         if firstValue == "0" {
-            firstValue = "0"
+            return
+        }
+        
+        if firstValue == nil && answer != nil {
+            
+            if answer!.contains(".") {
+                return
+            }
+            
+//            when pressing comma after calculated
+            
+//            answer? += value.rawValue
+            
+            return
         }
         
         if firstValue!.contains(".") {
@@ -111,7 +124,19 @@ class Calculation: ObservableObject {
     
     func pressedNegative() {
         
-        if firstValue == "0" || firstValue == nil {
+        if firstValue == "0"{
+            return
+        }
+        
+        if firstValue == nil && answer != nil {
+            if answer!.contains("-") {
+                let deleted = answer!.replacingOccurrences(of:"-", with:"")
+                answer = deleted
+                return
+            }
+            
+            answer = "-\(answer!)"
+           
             return
         }
         
@@ -125,8 +150,19 @@ class Calculation: ObservableObject {
         answer = firstValue
     }
     
+    
+   
+    
     func pressedPercent() {
-        if firstValue == "0" || firstValue == nil {
+        if firstValue == "0"{
+            return
+        }
+        
+        if firstValue == nil && answer != nil {
+            let answerNum = Double(answer!) ?? 0
+            let answerPer = answerNum / 100
+            answer = "\(answerPer)"
+            
             return
         }
         

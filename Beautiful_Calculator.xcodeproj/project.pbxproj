@@ -10,7 +10,6 @@
 		2B29303F290F3BB200EFAD34 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B29303E290F3BB200EFAD34 /* SettingView.swift */; };
 		2B30AF8E2918705F000FC59E /* RandomBlob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B30AF8D2918705F000FC59E /* RandomBlob.swift */; };
 		2B30AF90291886BA000FC59E /* GlassBgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B30AF8F291886BA000FC59E /* GlassBgView.swift */; };
-		2B30AF922918E19D000FC59E /* todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2B30AF912918E19D000FC59E /* todo.txt */; };
 		2B5677382921C9010076869E /* CalculationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5677372921C9010076869E /* CalculationState.swift */; };
 		2B5AAD5E2914D465006F5249 /* SimpleLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5AAD5D2914D465006F5249 /* SimpleLayout.swift */; };
 		2B5AAD602914D663006F5249 /* GlassLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5AAD5F2914D663006F5249 /* GlassLayout.swift */; };
@@ -30,6 +29,7 @@
 		2B98F076290A64140086C7BA /* Jost-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B98F075290A64140086C7BA /* Jost-VariableFont_wght.ttf */; };
 		2B98F07B290A64F00086C7BA /* CalcBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98F07A290A64F00086C7BA /* CalcBtn.swift */; };
 		2BA2A121291393E90034A30C /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA2A120291393E90034A30C /* ColorView.swift */; };
+		2BBE017B29D8F81F0030DE75 /* ColorName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBE017A29D8F81F0030DE75 /* ColorName.swift */; };
 		2BC0A7F9291739BE00437609 /* ShadowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0A7F8291739BE00437609 /* ShadowViewModel.swift */; };
 		2BC0A7FB291744EE00437609 /* ConditionalShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0A7FA291744EE00437609 /* ConditionalShadow.swift */; };
 		2BC0A7FE291765D800437609 /* OptionCircleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0A7FD291765D800437609 /* OptionCircleStyle.swift */; };
@@ -63,7 +63,6 @@
 		2B29303E290F3BB200EFAD34 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		2B30AF8D2918705F000FC59E /* RandomBlob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBlob.swift; sourceTree = "<group>"; };
 		2B30AF8F291886BA000FC59E /* GlassBgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassBgView.swift; sourceTree = "<group>"; };
-		2B30AF912918E19D000FC59E /* todo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = todo.txt; sourceTree = "<group>"; };
 		2B5677372921C9010076869E /* CalculationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationState.swift; sourceTree = "<group>"; };
 		2B5AAD5D2914D465006F5249 /* SimpleLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLayout.swift; sourceTree = "<group>"; };
 		2B5AAD5F2914D663006F5249 /* GlassLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassLayout.swift; sourceTree = "<group>"; };
@@ -87,6 +86,7 @@
 		2B98F075290A64140086C7BA /* Jost-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		2B98F07A290A64F00086C7BA /* CalcBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcBtn.swift; sourceTree = "<group>"; };
 		2BA2A120291393E90034A30C /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
+		2BBE017A29D8F81F0030DE75 /* ColorName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorName.swift; sourceTree = "<group>"; };
 		2BC0A7F8291739BE00437609 /* ShadowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowViewModel.swift; sourceTree = "<group>"; };
 		2BC0A7FA291744EE00437609 /* ConditionalShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalShadow.swift; sourceTree = "<group>"; };
 		2BC0A7FD291765D800437609 /* OptionCircleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCircleStyle.swift; sourceTree = "<group>"; };
@@ -176,7 +176,6 @@
 				2B98F077290A64280086C7BA /* fonts */,
 				2B98F073290A63CE0086C7BA /* Beautiful-Calculator-Info.plist */,
 				2B98F049290A63490086C7BA /* Beautiful_CalculatorApp.swift */,
-				2B30AF912918E19D000FC59E /* todo.txt */,
 				2B98F04B290A63490086C7BA /* ContentView.swift */,
 				2B5AAD632914D969006F5249 /* AppEntry.swift */,
 				2B98F04D290A634A0086C7BA /* Assets.xcassets */,
@@ -234,6 +233,7 @@
 				2B98F07A290A64F00086C7BA /* CalcBtn.swift */,
 				2B8DEB82291253C30087D29E /* Themes.swift */,
 				2B5677372921C9010076869E /* CalculationState.swift */,
+				2BBE017A29D8F81F0030DE75 /* ColorName.swift */,
 			);
 			path = enums;
 			sourceTree = "<group>";
@@ -404,7 +404,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B98F051290A634A0086C7BA /* Preview Assets.xcassets in Resources */,
-				2B30AF922918E19D000FC59E /* todo.txt in Resources */,
 				2B98F04E290A634A0086C7BA /* Assets.xcassets in Resources */,
 				2B98F076290A64140086C7BA /* Jost-VariableFont_wght.ttf in Resources */,
 				2B60391B291A1F67001D45A8 /* Montserrat-VariableFont_wght.ttf in Resources */,
@@ -448,6 +447,7 @@
 				2B5AAD662914DAD4006F5249 /* CalnUtils.swift in Sources */,
 				2B8DEB81291250200087D29E /* ThemeViewModel.swift in Sources */,
 				2BC0A7FE291765D800437609 /* OptionCircleStyle.swift in Sources */,
+				2BBE017B29D8F81F0030DE75 /* ColorName.swift in Sources */,
 				2B5AAD5E2914D465006F5249 /* SimpleLayout.swift in Sources */,
 				2BA2A121291393E90034A30C /* ColorView.swift in Sources */,
 				2B5AAD602914D663006F5249 /* GlassLayout.swift in Sources */,
