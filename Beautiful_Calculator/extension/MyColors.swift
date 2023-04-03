@@ -37,6 +37,7 @@ extension Color {
         case .whiteGray: return ColorName.whiteGray.rawValue
         case .myWhite: return ColorName.myWhite.rawValue
         case .glassBgWhite: return ColorName.glassBgWhite.rawValue
+        case .myGreen : return ColorName.myGreen.rawValue
         default: return nil
         }
     }

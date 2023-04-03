@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		2B29303F290F3BB200EFAD34 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B29303E290F3BB200EFAD34 /* SettingView.swift */; };
+		2B29712B29DABD0200927BED /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B29712A29DABD0200927BED /* WidgetKit.framework */; };
+		2B29712D29DABD0200927BED /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B29712C29DABD0200927BED /* SwiftUI.framework */; };
+		2B29713029DABD0200927BED /* BCWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B29712F29DABD0200927BED /* BCWidgetBundle.swift */; };
+		2B29713229DABD0200927BED /* BCWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B29713129DABD0200927BED /* BCWidgetLiveActivity.swift */; };
+		2B29713429DABD0200927BED /* BCWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B29713329DABD0200927BED /* BCWidget.swift */; };
+		2B29713729DABD0300927BED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B29713629DABD0300927BED /* Assets.xcassets */; };
+		2B29713929DABD0300927BED /* BCWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2B29713529DABD0200927BED /* BCWidget.intentdefinition */; };
+		2B29713A29DABD0300927BED /* BCWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2B29713529DABD0200927BED /* BCWidget.intentdefinition */; };
+		2B29713D29DABD0300927BED /* BCWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2B29712829DABD0200927BED /* BCWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2B30AF8E2918705F000FC59E /* RandomBlob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B30AF8D2918705F000FC59E /* RandomBlob.swift */; };
 		2B30AF90291886BA000FC59E /* GlassBgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B30AF8F291886BA000FC59E /* GlassBgView.swift */; };
 		2B5677382921C9010076869E /* CalculationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5677372921C9010076869E /* CalculationState.swift */; };
@@ -43,6 +52,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2B29713B29DABD0300927BED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B98F03E290A63490086C7BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B29712729DABD0200927BED;
+			remoteInfo = BCWidgetExtension;
+		};
 		2B98F057290A634A0086C7BA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2B98F03E290A63490086C7BA /* Project object */;
@@ -59,8 +75,31 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2B29714129DABD0300927BED /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2B29713D29DABD0300927BED /* BCWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2B29303E290F3BB200EFAD34 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		2B29712829DABD0200927BED /* BCWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BCWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B29712A29DABD0200927BED /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		2B29712C29DABD0200927BED /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		2B29712F29DABD0200927BED /* BCWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCWidgetBundle.swift; sourceTree = "<group>"; };
+		2B29713129DABD0200927BED /* BCWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		2B29713329DABD0200927BED /* BCWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCWidget.swift; sourceTree = "<group>"; };
+		2B29713529DABD0200927BED /* BCWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = BCWidget.intentdefinition; sourceTree = "<group>"; };
+		2B29713629DABD0300927BED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B29713829DABD0300927BED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B30AF8D2918705F000FC59E /* RandomBlob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBlob.swift; sourceTree = "<group>"; };
 		2B30AF8F291886BA000FC59E /* GlassBgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassBgView.swift; sourceTree = "<group>"; };
 		2B5677372921C9010076869E /* CalculationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationState.swift; sourceTree = "<group>"; };
@@ -100,6 +139,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2B29712529DABD0200927BED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B29712D29DABD0200927BED /* SwiftUI.framework in Frameworks */,
+				2B29712B29DABD0200927BED /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2B98F043290A63490086C7BA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,6 +172,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B29712929DABD0200927BED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B29712A29DABD0200927BED /* WidgetKit.framework */,
+				2B29712C29DABD0200927BED /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B29712E29DABD0200927BED /* BCWidget */ = {
+			isa = PBXGroup;
+			children = (
+				2B29712F29DABD0200927BED /* BCWidgetBundle.swift */,
+				2B29713129DABD0200927BED /* BCWidgetLiveActivity.swift */,
+				2B29713329DABD0200927BED /* BCWidget.swift */,
+				2B29713529DABD0200927BED /* BCWidget.intentdefinition */,
+				2B29713629DABD0300927BED /* Assets.xcassets */,
+				2B29713829DABD0300927BED /* Info.plist */,
+			);
+			path = BCWidget;
+			sourceTree = "<group>";
+		};
 		2B5AAD5C2914D41C006F5249 /* layout */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +222,8 @@
 				2B98F048290A63490086C7BA /* Beautiful_Calculator */,
 				2B98F059290A634A0086C7BA /* Beautiful_CalculatorTests */,
 				2B98F063290A634A0086C7BA /* Beautiful_CalculatorUITests */,
+				2B29712E29DABD0200927BED /* BCWidget */,
+				2B29712929DABD0200927BED /* Frameworks */,
 				2B98F047290A63490086C7BA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -162,6 +234,7 @@
 				2B98F046290A63490086C7BA /* Beautiful_Calculator.app */,
 				2B98F056290A634A0086C7BA /* Beautiful_CalculatorTests.xctest */,
 				2B98F060290A634A0086C7BA /* Beautiful_CalculatorUITests.xctest */,
+				2B29712829DABD0200927BED /* BCWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -298,6 +371,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2B29712729DABD0200927BED /* BCWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B29713E29DABD0300927BED /* Build configuration list for PBXNativeTarget "BCWidgetExtension" */;
+			buildPhases = (
+				2B29712429DABD0200927BED /* Sources */,
+				2B29712529DABD0200927BED /* Frameworks */,
+				2B29712629DABD0200927BED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BCWidgetExtension;
+			productName = BCWidgetExtension;
+			productReference = 2B29712829DABD0200927BED /* BCWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		2B98F045290A63490086C7BA /* Beautiful_Calculator */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B98F06A290A634A0086C7BA /* Build configuration list for PBXNativeTarget "Beautiful_Calculator" */;
@@ -305,10 +395,12 @@
 				2B98F042290A63490086C7BA /* Sources */,
 				2B98F043290A63490086C7BA /* Frameworks */,
 				2B98F044290A63490086C7BA /* Resources */,
+				2B29714129DABD0300927BED /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2B29713C29DABD0300927BED /* PBXTargetDependency */,
 			);
 			name = Beautiful_Calculator;
 			packageProductDependencies = (
@@ -360,9 +452,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1400;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					2B29712729DABD0200927BED = {
+						CreatedOnToolsVersion = 14.3;
+					};
 					2B98F045290A63490086C7BA = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
@@ -394,11 +489,20 @@
 				2B98F045290A63490086C7BA /* Beautiful_Calculator */,
 				2B98F055290A634A0086C7BA /* Beautiful_CalculatorTests */,
 				2B98F05F290A634A0086C7BA /* Beautiful_CalculatorUITests */,
+				2B29712729DABD0200927BED /* BCWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2B29712629DABD0200927BED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B29713729DABD0300927BED /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2B98F044290A63490086C7BA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -427,6 +531,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2B29712429DABD0200927BED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B29713029DABD0200927BED /* BCWidgetBundle.swift in Sources */,
+				2B29713229DABD0200927BED /* BCWidgetLiveActivity.swift in Sources */,
+				2B29713429DABD0200927BED /* BCWidget.swift in Sources */,
+				2B29713929DABD0300927BED /* BCWidget.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2B98F042290A63490086C7BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -452,6 +567,7 @@
 				2BA2A121291393E90034A30C /* ColorView.swift in Sources */,
 				2B5AAD602914D663006F5249 /* GlassLayout.swift in Sources */,
 				2BC0A8002917684100437609 /* TextColorOptionCircle.swift in Sources */,
+				2B29713A29DABD0300927BED /* BCWidget.intentdefinition in Sources */,
 				2BF3FE40291B76BF00C2611E /* Calculation.swift in Sources */,
 				2BDCCACD2916047C001A7D7D /* SoftBtnStyle.swift in Sources */,
 				2BE5837C2910FE8900A76263 /* ThemeOptionView.swift in Sources */,
@@ -480,6 +596,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2B29713C29DABD0300927BED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B29712729DABD0200927BED /* BCWidgetExtension */;
+			targetProxy = 2B29713B29DABD0300927BED /* PBXContainerItemProxy */;
+		};
 		2B98F058290A634A0086C7BA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2B98F045290A63490086C7BA /* Beautiful_Calculator */;
@@ -493,6 +614,62 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		2B29713F29DABD0300927BED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4HXZ9JZTUY;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BCWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BCWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ryunosuke.Beautiful-Calculator.BCWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B29714029DABD0300927BED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4HXZ9JZTUY;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BCWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BCWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ryunosuke.Beautiful-Calculator.BCWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		2B98F068290A634A0086C7BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -610,6 +787,7 @@
 		2B98F06B290A634A0086C7BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -640,6 +818,7 @@
 		2B98F06C290A634A0086C7BA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -742,6 +921,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2B29713E29DABD0300927BED /* Build configuration list for PBXNativeTarget "BCWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B29713F29DABD0300927BED /* Debug */,
+				2B29714029DABD0300927BED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2B98F041290A63490086C7BA /* Build configuration list for PBXProject "Beautiful_Calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
