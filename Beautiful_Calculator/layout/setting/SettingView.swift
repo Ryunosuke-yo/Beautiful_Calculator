@@ -13,6 +13,7 @@ struct SettingView: View {
     @EnvironmentObject private var colorView: ColorView
     @EnvironmentObject private var shadowViewModel: ShadowViewModel
     @EnvironmentObject private var themeViewModel: ThemeViewModel
+  
     
     func getSelectedThemeString()-> String {
         if themeViewModel.isGlass {
@@ -93,7 +94,8 @@ struct SettingView: View {
                     
                     Spacer()
                     
-                    NavigationLink(destination: ThemeOptionView()) {
+                    NavigationLink(destination: ThemeOptionView())
+                    {
                         HStack {
                             Text("Select theme")
                                 .foregroundColor(.black)
@@ -108,15 +110,21 @@ struct SettingView: View {
                                 .foregroundColor(.gray)
                         }
                         .padding([.leading, .trailing], 30)
+                        
+                        
                     }
                     Spacer()
                 }
                 
                 
             }
+        
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
+        .accentColor(.myBlack)
+        
     }
+        
     
 }
 

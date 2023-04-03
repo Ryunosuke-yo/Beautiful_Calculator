@@ -10,6 +10,7 @@ import SwiftUI
 struct AppEntry: View {
     @EnvironmentObject private var themeState: ThemeViewModel
     @EnvironmentObject private var colorState : ColorView
+    @EnvironmentObject private var shadowState : ShadowViewModel
     @Environment(\.scenePhase) var phase
     @AppStorage("currentTheme") private var theme = "None"
     @AppStorage("currentTextColor") private var textColor = "None"
@@ -57,6 +58,7 @@ struct AppEntry: View {
             themeState.setIsGlass()
         case Themes.soft.rawValue:
             themeState.setIsSoft()
+            applyShadowColor()
         case Themes.simple.rawValue:
             themeState.setIsSimple()
         default:
@@ -72,6 +74,22 @@ struct AppEntry: View {
             colorState.changeBgColor(Color.getColorValue(colorString: themeColor))
         }
         
+    }
+    
+    func applyShadowColor() {
+        switch themeColor {
+        case Color.myBlack.getNameString :
+            shadowState.changeShadowColor(leftShadow: .myBlack_leftShadow, rightShadow: .myBlack_rightShadow)
+        case Color.myWhite.getNameString:
+            shadowState.changeShadowColor(leftShadow: .myWhite_leftShadow, rightShadow: .myWhite_rightShadow)
+        case Color.myRed.getNameString:
+            shadowState.changeShadowColor(leftShadow: .myRed_leftShadow, rightShadow: .myBlack_rightShadow)
+        case Color.myPurple.getNameString:
+            shadowState.changeShadowColor(leftShadow: .myPurple_leftShadow, rightShadow: .myBlack_rightShadow)
+        case Color.myGreen.getNameString:
+            shadowState.changeShadowColor(leftShadow: .myGreen_leftShadow, rightShadow: .myBlack_rightShadow)
+        default: break
+        }
     }
 }
 

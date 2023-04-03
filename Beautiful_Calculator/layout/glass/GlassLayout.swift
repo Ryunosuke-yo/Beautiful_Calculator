@@ -19,7 +19,8 @@ struct GlassLayout: View {
     let glassCalcBtnWidth = UIScreen.main.bounds.width
     let glassCalcBtnHeight = UIScreen.main.bounds.height / 1.6
     
-    let btnSize = UIScreen.main.bounds.width / 6
+    let btnWidthSize = UIScreen.main.bounds.width / 6
+    let btnHeightSize = UIScreen.main.bounds.height / 10
     
     
     
@@ -80,6 +81,7 @@ struct GlassLayout: View {
                 .background(glassBgView())
                 
                 Spacer()
+               
                 VStack {
                     ForEach(buttons, id: \.self ) { groups in
                         HStack {
@@ -90,7 +92,7 @@ struct GlassLayout: View {
                                     } , label: {
                                         Text(value.rawValue)
                                             .font(.custom("MontserratRoman-Regular", size: 25))
-                                            .frame(width: btnSize * 2, height: 30)
+                                            .frame(width: btnWidthSize * 2, height: btnHeightSize / 2)
                                             .foregroundColor(colorView.currentTextColor)
                                         
                                     })
@@ -102,7 +104,7 @@ struct GlassLayout: View {
                                     } , label: {
                                         Text(value.rawValue)
                                             .font(.custom("MontserratRoman-Regular", size: 30))
-                                            .frame(width: btnSize, height: 90)
+                                            .frame(width: btnWidthSize, height: btnHeightSize)
                                             .foregroundColor(colorView.currentTextColor)
                                         
                                     })
@@ -178,7 +180,11 @@ struct GlassLayout_Previews: PreviewProvider {
     @State static var showSetting = false
     static var previews: some View {
         GlassLayout(showSetting: $showSetting)
+            .environmentObject(ThemeViewModel())
             .environmentObject(ColorView())
+            .environmentObject(ShadowViewModel())
+            .environmentObject(Calculation())
+        
     }
 }
 

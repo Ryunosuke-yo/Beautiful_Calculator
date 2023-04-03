@@ -106,14 +106,14 @@ class Calculation: ObservableObject {
                 return
             }
             
-//            when pressing comma after calculated
-            
-//            answer? += value.rawValue
-            
             return
         }
         
-        if firstValue!.contains(".") {
+        if firstValue == nil {
+            return
+        }
+        
+        if (firstValue!.contains(".")) {
             return
         }
         
@@ -140,6 +140,10 @@ class Calculation: ObservableObject {
             return
         }
         
+        if firstValue == nil {
+            return
+        }
+        
         if firstValue!.contains("-") {
             let deleted = firstValue!.replacingOccurrences(of:"-", with:"")
             firstValue = deleted
@@ -163,6 +167,10 @@ class Calculation: ObservableObject {
             let answerPer = answerNum / 100
             answer = "\(answerPer)"
             
+            return
+        }
+        
+        if firstValue == nil {
             return
         }
         
