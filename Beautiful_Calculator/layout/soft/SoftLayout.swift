@@ -52,7 +52,7 @@ struct SoftLayout: View {
                         
                         Text(calculation.answer != nil ? calculation.answer! : calculation.secondValue != nil ? calculation.secondValue! : "0")
                             .foregroundColor(colorView.currentTextColor)
-                            .font(.custom("Jost-Regular", size: 60))
+                            .font(.custom("Jost-Regular", size: 65))
                             .lineLimit(1)
                             .minimumScaleFactor(0.4)
                         
@@ -80,7 +80,7 @@ struct SoftLayout: View {
                                     calculation.pressedBtns(value: value)
                                 } , label: {
                                     Text(value.rawValue)
-                                        .font(.custom("Jost-Regular", size: 20))
+                                        .font(.custom("Jost-Regular", size: 35))
                                         .frame(width: softBtnWidth * 2, height: softBtnWidth)
                                         .foregroundColor(colorView.currentTextColor)
                                     
@@ -93,7 +93,7 @@ struct SoftLayout: View {
                                     
                                 } , label: {
                                     Text(value.rawValue)
-                                        .font(.custom("Jost-Regular", size: 20))
+                                        .font(.custom("Jost-Regular", size: 35))
                                         .frame(width: softBtnWidth, height: softBtnWidth)
                                         .foregroundColor(colorView.currentTextColor)
                                     

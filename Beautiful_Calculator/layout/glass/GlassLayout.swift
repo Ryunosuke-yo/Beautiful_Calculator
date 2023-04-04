@@ -67,7 +67,7 @@ struct GlassLayout: View {
                                 .lineLimit(1)
                                 .minimumScaleFactor(0.4)
                                 .foregroundColor(colorView.currentTextColor)
-                                .font(.custom("MontserratRoman-Regular", size: 60))
+                                .font(.custom("MontserratRoman-Regular", size: 65))
                         }
                     }
                     .frame(width: 290)
@@ -91,7 +91,7 @@ struct GlassLayout: View {
                                         calculation.pressedBtns(value: value)
                                     } , label: {
                                         Text(value.rawValue)
-                                            .font(.custom("MontserratRoman-Regular", size: 25))
+                                            .font(.custom("MontserratRoman-Regular", size: 40))
                                             .frame(width: btnWidthSize * 2, height: btnHeightSize / 2)
                                             .foregroundColor(colorView.currentTextColor)
                                         
@@ -103,7 +103,7 @@ struct GlassLayout: View {
                                         calculation.pressedBtns(value: value)
                                     } , label: {
                                         Text(value.rawValue)
-                                            .font(.custom("MontserratRoman-Regular", size: 30))
+                                            .font(.custom("MontserratRoman-Regular", size: 40))
                                             .frame(width: btnWidthSize, height: btnHeightSize)
                                             .foregroundColor(colorView.currentTextColor)
                                         

@@ -53,12 +53,12 @@ struct AppEntry: View {
     }
     
     func changeThemOnStorage()-> Void {
+        applyShadowColor()
         switch theme {
         case Themes.glass.rawValue:
             themeState.setIsGlass()
         case Themes.soft.rawValue:
             themeState.setIsSoft()
-            applyShadowColor()
         case Themes.simple.rawValue:
             themeState.setIsSimple()
         default:
