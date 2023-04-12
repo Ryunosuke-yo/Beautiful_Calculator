@@ -42,7 +42,7 @@ struct SoftLayout: View {
                         .position(x:40, y:40)
                         .sheet(isPresented: $showSetting) {
                             SettingView(showSetting: $showSetting)
-                                .presentationDetents([.fraction(0.55)])
+                                .presentationDetents([.fraction(0.5)])
                         }
                         
                     }

@@ -97,6 +97,8 @@ class Calculation: ObservableObject {
     
     func pressedComa(value: CalcBtn) {
         if firstValue == "0" {
+            firstValue = "0."
+            answer = "0."
             return
         }
         
